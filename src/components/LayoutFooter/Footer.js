@@ -43,14 +43,17 @@ const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => (
           flexWrap: 'wrap',
 
           [media.between('small', 'medium')]: {
-            paddingRight: layoutHasSidebar ? 240 : null,
+            paddingRight: layoutHasSidebar ? 0 : null,
+            marginLeft: layoutHasSidebar ? 300 : null,
           },
 
           [media.between('large', 'largerSidebar')]: {
-            paddingRight: layoutHasSidebar ? 280 : null,
+            paddingRight: layoutHasSidebar ? 0 : null,
+            marginLeft: layoutHasSidebar ? 350 : null,
           },
           [media.between('largerSidebar', 'sidebarFixed', true)]: {
-            paddingRight: layoutHasSidebar ? 380 : null,
+            paddingRight: layoutHasSidebar ? 0 : null,
+            marginLeft: layoutHasSidebar ? 400 : null
           },
         }}>
         <div

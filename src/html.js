@@ -5,6 +5,8 @@
  */
 
 import React from 'react';
+import { Redirect } from 'react-router-dom'
+
 
 const JS_NPM_URLS = [
   'https://unpkg.com/docsearch.js@2.4.1/dist/cdn/docsearch.min.js',
@@ -19,6 +21,7 @@ type Props = {|
 |};
 
 export default class HTML extends React.Component<Props> {
+
   render() {
     return (
       <html lang="en" {...this.props.htmlAttributes}>

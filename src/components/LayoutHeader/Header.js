@@ -13,11 +13,12 @@ import {colors, fonts, media} from 'theme';
 import {version} from 'site-constants';
 import ExternalLinkSvg from 'templates/components/ExternalLinkSvg';
 import DocSearch from './DocSearch';
+import './css/Header.style.css'
 
 // $FlowFixMe
 import navHeader from '../../../content/headerNav.yml';
 
-import logoSvg from 'icons/logo.svg';
+import scandiPWA from './../../icons/ScandiPWA.png'
 
 const Header = ({location}: {location: Location}) => (
   <header
@@ -34,32 +35,7 @@ const Header = ({location}: {location: Location}) => (
       },
     }}>
     <Container>
-      <div
-        css={{
-          height: 60,
-          fontSize: 20,
-          padding: 20,
-          textAlign: 'center',
-          [media.between('small', 'large')]: {
-            fontSize: 22,
-            height: 60,
-          },
-          [media.lessThan('small')]: {
-            height: 80,
-          },
-          [media.greaterThan('medium')]: {
-            fontSize: 25,
-          },
-        }}>
-        Black Lives Matter.{' '}
-        <a
-          style={{color: colors.brand}}
-          target="_blank"
-          rel="noopener"
-          href="https://support.eji.org/give/153413/#!/donation/checkout">
-          Support&nbsp;the&nbsp;Equal&nbsp;Justice&nbsp;Initiative.
-        </a>
-      </div>
+
     </Container>
     <Container>
       <div
@@ -73,7 +49,7 @@ const Header = ({location}: {location: Location}) => (
           },
           [media.lessThan('small')]: {
             height: 40,
-          },
+          }
         }}>
         <Link
           css={{
@@ -82,6 +58,8 @@ const Header = ({location}: {location: Location}) => (
             height: '100%',
             alignItems: 'center',
             color: colors.brand,
+            marginLeft: "-15%",
+            marginRight: "15%",
 
             ':focus': {
               outline: 0,
@@ -96,32 +74,10 @@ const Header = ({location}: {location: Location}) => (
             },
           }}
           to="/">
-          <img src={logoSvg} alt="" height="20" />
-          <span
-            css={{
-              color: 'inherit',
-              marginLeft: 10,
-              fontWeight: 700,
-              fontSize: 20,
-              lineHeight: '20px',
-              [media.lessThan('large')]: {
-                fontSize: 16,
-                marginTop: 1,
-              },
-              [media.lessThan('small')]: {
-                // Visually hidden
-                position: 'absolute',
-                overflow: 'hidden',
-                clip: 'rect(0 0 0 0)',
-                height: 1,
-                width: 1,
-                margin: -1,
-                padding: 0,
-                border: 0,
-              },
-            }}>
-            React
-          </span>
+
+
+          <img src={scandiPWA} alt="" id="HeaderImg" css={{ width: "180px", height: "180px",  }}   />
+
         </Link>
 
         <nav
@@ -164,9 +120,10 @@ const Header = ({location}: {location: Location}) => (
           ))}
         </nav>
 
-        <DocSearch />
 
-        <div
+        {/* <DocSearch /> */}
+
+        {/* <div
           css={{
             display: 'flex',
             alignItems: 'center',
@@ -180,60 +137,7 @@ const Header = ({location}: {location: Location}) => (
             //width: 'calc(100% / 4)',
             //},
           }}>
-          <Link
-            css={{
-              padding: '5px 10px',
-              whiteSpace: 'nowrap',
-              ...fonts.small,
 
-              ':hover': {
-                color: colors.brand,
-              },
-
-              ':focus': {
-                outline: 0,
-                backgroundColor: colors.lighter,
-                borderRadius: 15,
-              },
-
-              [media.lessThan('medium')]: {
-                display: 'none',
-              },
-            }}
-            to="/versions">
-            v{version}
-          </Link>
-          <Link
-            css={{
-              display: 'flex',
-              alignItems: 'center',
-              padding: '5px 10px',
-              whiteSpace: 'nowrap',
-              ...fonts.small,
-
-              ':hover': {
-                color: colors.brand,
-              },
-
-              ':focus': {
-                outline: 0,
-                backgroundColor: colors.lighter,
-                borderRadius: 15,
-              },
-            }}
-            to="/languages">
-            <LanguagesIcon />{' '}
-            <span
-              css={{
-                marginLeft: '0.5rem',
-
-                [media.lessThan('medium')]: {
-                  display: 'none',
-                },
-              }}>
-              Languages
-            </span>
-          </Link>
           <a
             css={{
               padding: '5px 10px',
@@ -267,7 +171,7 @@ const Header = ({location}: {location: Location}) => (
               }}
             />
           </a>
-        </div>
+        </div> */}
       </div>
     </Container>
   </header>

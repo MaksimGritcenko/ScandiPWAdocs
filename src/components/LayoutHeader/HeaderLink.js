@@ -15,12 +15,17 @@ type Props = {
   to: string,
 };
 
-const HeaderLink = ({isActive, title, to}: Props) => (
-  <Link css={[style, isActive && activeStyle]} to={to}>
-    {title}
-    {isActive && <span css={activeAfterStyle} />}
-  </Link>
-);
+const HeaderLink = ({isActive, title, to}: Props) => {
+
+
+  return(
+      <a href={to} css={[style, isActive && activeStyle]}>
+        {title}
+        {isActive && <span css={activeAfterStyle}/>}
+      </a>
+  )
+
+  };
 
 const style = {
   display: 'flex',

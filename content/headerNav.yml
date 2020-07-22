@@ -1,13 +1,19 @@
+
 items:
+  - title: About ScandiPWA
+    to: https://scandipwa.com/about
+  - title: PWA User Manual
+    to: https://scandiweb.atlassian.net/wiki/spaces/SUG/
+  - title: For Developers
+    to: https://scandipwa.com/community.html
   - title: Docs
     to: /docs/getting-started.html
     activeSelector: /docs/
-  - title: Tutorial
-    to: /tutorial/tutorial.html
-    activeSelector: /tutorial
+  - title: Partners
+    to: https://scandipwa.com/partners.html
   - title: Blog
-    to: /blog/
-    activeSelector: /blog
-  - title: Community
-    to: /community/support.html
+    to: https://medium.com/progressivewebapps
+    activeSelector: /community
+  - title: Slack
+    to: https://scandipwa.com/community.html#join-slack
     activeSelector: /community

@@ -24,22 +24,28 @@ const NavigationFooter = ({next, prev, location}) => {
         <Flex
           type="ul"
           halign="space-between"
+          className="FooterLink"
           css={{
             [media.between('small', 'medium')]: {
-              paddingRight: 240,
+              paddingRight: 0,
             },
 
             [media.between('large', 'largerSidebar')]: {
-              paddingRight: 280,
+              paddingRight: 0,
             },
 
             [media.between('largerSidebar', 'sidebarFixed', true)]: {
-              paddingRight: 380,
+              paddingRight: 0,
             },
           }}>
           <Flex basis="50%" type="li">
             {prev && (
-              <div>
+              <div css={{
+                  marginLeft: 300,
+                  [media.lessThan('medium')]: {
+                    marginLeft: 0,
+                  },
+              }}>
                 <SecondaryLabel>Previous article</SecondaryLabel>
                 <div
                   css={{
@@ -57,10 +63,25 @@ const NavigationFooter = ({next, prev, location}) => {
               halign="flex-end"
               basis="50%"
               type="li"
+              className="FooterLink"
               css={{
                 textAlign: 'right',
+                [media.between('small', 'medium')]: {
+                  paddingRight: 240,
+                },
+                [media.between('large', 'largerSidebar')]: {
+                  paddingRight: 280,
+                },
+                [media.between('largerSidebar', 'sidebarFixed', true)]: {
+                  paddingRight: 0,
+                },
               }}>
-              <div>
+              <div css={{
+                  marginLeft: 300,
+                  [media.lessThan('medium')]: {
+                    marginLeft: 0,
+                  },
+              }}>
                 <SecondaryLabel>Next article</SecondaryLabel>
                 <div
                   css={{

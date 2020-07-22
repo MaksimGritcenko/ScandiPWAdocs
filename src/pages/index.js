@@ -17,7 +17,7 @@ import {colors, media, sharedStyles} from 'theme';
 import loadScript from 'utils/loadScript';
 import createCanonicalUrl from 'utils/createCanonicalUrl';
 import {babelURL} from 'site-constants';
-import logoWhiteSvg from 'icons/logo-white.svg';
+// import logoWhiteSvg from 'icons/logo-white.svg';
 
 class Home extends Component {
   state = {
@@ -87,7 +87,7 @@ class Home extends Component {
                     left: 0,
                     bottom: 0,
                     right: 0,
-                    backgroundImage: `url(${logoWhiteSvg})`,
+                    // backgroundImage: `url(${logoWhiteSvg})`,
                     backgroundRepeat: 'no-repeat',
                     backgroundPosition: '100% 100px',
                     backgroundSize: '50% auto',
@@ -153,7 +153,7 @@ class Home extends Component {
                     }}>
                     <CtaItem>
                       <ButtonLink
-                        to="/docs/getting-started.html"
+                        to="/docs/installation.html"
                         type="primary">
                         Get Started
                       </ButtonLink>
@@ -297,7 +297,7 @@ class Home extends Component {
                   justifyContent: 'center',
                 }}>
                 <CtaItem>
-                  <ButtonLink to="/docs/getting-started.html" type="primary">
+                  <ButtonLink to="/docs/installation.html" type="primary">
                     Get Started
                   </ButtonLink>
                 </CtaItem>

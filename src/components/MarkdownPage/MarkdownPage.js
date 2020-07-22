@@ -16,6 +16,7 @@ import findSectionForPath from 'utils/findSectionForPath';
 import toCommaSeparatedList from 'utils/toCommaSeparatedList';
 import {sharedStyles} from 'theme';
 import createCanonicalUrl from 'utils/createCanonicalUrl';
+import './MarkdownPage.style.css'
 
 import type {Node} from 'types';
 
@@ -39,6 +40,9 @@ const getPageById = (sectionList: Array<Object>, templateFile: ?string) => {
   const sectionItems = sectionList.map(section => section.items);
   const flattenedSectionItems = [].concat.apply([], sectionItems);
   const linkId = templateFile.replace('.html', '');
+
+
+
 
   return flattenedSectionItems.find(item => item.id === linkId);
 };
@@ -79,8 +83,26 @@ const MarkdownPage = ({
       />
       <div css={{flex: '1 0 auto'}}>
         <Container>
+        <div css={sharedStyles.articleLayout.sidebar}>
+              <StickyResponsiveSidebar
+                enableScrollSync={enableScrollSync}
+                createLink={createLink}
+                defaultActiveSection={findSectionForPath(
+                  location.pathname,
+                  sectionList,
+                )}
+                location={location}
+                sectionList={sectionList}
+              />
+            </div>
+            {/* content starts here */}
+
           <div css={sharedStyles.articleLayout.container}>
-            <Flex type="article" direction="column" grow="1" halign="stretch">
+            <Flex type="article"
+                  direction="column"
+                  grow="1"
+                  halign="flex-start"
+                  id="flex">
               <MarkdownHeader title={titlePrefix} />
 
               {(date || hasAuthors) && (
@@ -122,19 +144,6 @@ const MarkdownPage = ({
                 )}
               </div>
             </Flex>
-
-            <div css={sharedStyles.articleLayout.sidebar}>
-              <StickyResponsiveSidebar
-                enableScrollSync={enableScrollSync}
-                createLink={createLink}
-                defaultActiveSection={findSectionForPath(
-                  location.pathname,
-                  sectionList,
-                )}
-                location={location}
-                sectionList={sectionList}
-              />
-            </div>
           </div>
         </Container>
       </div>

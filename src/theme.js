@@ -10,21 +10,23 @@
  */
 
 import hex2rgba from 'hex2rgba';
+import { firstChild } from 'glamor';
 
 const colors = {
   lighter: '#373940', // light blue
   dark: '#282c34', // dark blue
-  darker: '#20232a', // really dark blue
-  brand: '#61dafb', // electric blue
-  brandLight: '#bbeffd',
+  darker: '#ebebeb', // really dark blue
+  brand: '#ef6423', // electric blue
+  brandLight: '#DEAD97',
   text: '#1a1a1a', // very dark grey / black substitute
   subtle: '#6d6d6d', // light grey for text
   subtleOnDark: '#999',
   divider: '#ececec', // very light grey
   note: '#ffe564', // yellow
   error: '#ff6464', // yellow
-  white: '#ffffff',
+  white: '#000000',
   black: '#000000',
+  codeWhite: '#ffffff',
 };
 
 const SIZES = {
@@ -115,17 +117,27 @@ const linkStyle = {
     borderBottomColor: colors.text,
   },
 };
+
+
+
 const sharedStyles = {
   link: linkStyle,
+  flex: {
+    [media.greaterThan("largerSidebar")]: {
+      position: "relative",
+      left: 150,
+    }
+  },
 
   articleLayout: {
+
     container: {
+
       display: 'flex',
       minHeight: 'calc(100vh - 60px)',
       [media.greaterThan('sidebarFixed')]: {
         maxWidth: 840,
-        marginLeft: 'auto',
-        marginRight: 'auto',
+        marginLeft: '0',
       },
       [media.lessThan('small')]: {
         flexDirection: 'column',
@@ -137,6 +149,11 @@ const sharedStyles = {
 
       [media.greaterThan('medium')]: {
         marginTop: 50,
+      },
+      [media.greaterThan('large')]: {
+        marginRight: 200,
+        marginTop: 100, // BLM
+        marginLeft: 240,
       },
     },
     sidebar: {
