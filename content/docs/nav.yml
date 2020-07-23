@@ -67,40 +67,28 @@
       title: How to Work With Theme Build and Configuration
     - id: caching
       title: How to implement caching for new caching identities
-
-
 - title: Tutorials - Intermediate
   items:
     - id: debug-in-chrome
       title: How to Debug ScandiPWA in Chrome
-
     - id: xdebug
       title: How to configure XDebug
-
     - id: cli
       title: How to use CLI in Docker
-
     - id: postman-graphql-playground
       title: How to Use Postman & GraphQL playground
-
     - id: vsc-extensions
       title: How to use VSCode Extensions
-
     - id: eslint-stylelint
       title: How to write better code using ESlint & StyleLint
-
     - id: contribute
       title: How to Contribute
-
     - id: migrate-newer-version
       title: How to Migrate to a Newer Version
-
     - id: coding-standard
       title: BEM and Coding Standards
-
     - id: react-best-practices
       title: React Best Practices
-
     - id: best-practices-styles
       title: Best Practices Working with Styles
 

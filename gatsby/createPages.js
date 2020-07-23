@@ -22,9 +22,17 @@ module.exports = async ({graphql, actions}) => {
   // Redirect /index.html to root.
   createRedirect({
     fromPath: '/index.html',
+    // fromPath: '/',
     redirectInBrowser: true,
     toPath: '/',
+    // toPath: '/docs/linux.html',
   });
+
+  // createRedirect({
+  //   fromPath: '/',
+  //   redirectInBrowser: true,
+  //   toPath: '/docs/getting-started.html'
+  // })
 
   const allMarkdown = await graphql(
     `

@@ -49,7 +49,7 @@ class StickyResponsiveSidebar extends Component<Props, State> {
       right: 0,
       width: '100vw',
       position: 'fixed',
-      backgroundColor: colors.white,
+      backgroundColor: colors.codeWhite,
       zIndex: 2,
       height: '100vh',
       overflowY: 'auto',
@@ -81,6 +81,7 @@ class StickyResponsiveSidebar extends Component<Props, State> {
               paddingRight: -999,
               backgroundColor: '#f7f7f7',
               maxWidth: 600,
+              minWidth: 500
             },
 
             [media.between('medium', 'sidebarFixed', true)]: {
@@ -92,7 +93,8 @@ class StickyResponsiveSidebar extends Component<Props, State> {
             [media.greaterThan('small')]: {
               position: 'fixed',
               zIndex: 2,
-              height: 'calc(100vh - 60px)',
+              // height: 'calc(100vh - 60px)',
+              height: '100%',
               overflowY: 'auto',
               WebkitOverflowScrolling: 'touch',
               marginRight: -999,
@@ -104,11 +106,13 @@ class StickyResponsiveSidebar extends Component<Props, State> {
             },
 
             [media.size('small')]: {
-              height: 'calc(100vh - 40px)',
+              // height: 'calc(100vh - 40px)',
+              height: '100%',
             },
 
             [media.between('medium', 'large')]: {
-              height: 'calc(100vh - 50px)',
+              // height: 'calc(100vh - 50px)',
+              height: '100%',
             },
 
             [media.greaterThan('sidebarFixed')]: {

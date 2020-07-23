@@ -45,15 +45,16 @@ const Header = ({location}: {location: Location}) => (
           alignItems: 'center',
           height: 60,
           [media.between('small', 'large')]: {
-            height: 50,
+            height: 60,
           },
           [media.lessThan('small')]: {
-            height: 40,
+            height: 60,
           }
         }}>
-        <Link
-          css={{
-            display: 'flex',
+        {/* <Link to="/"> */}
+          <div
+            css={{
+              display: 'flex',
             marginRight: 10,
             height: '100%',
             alignItems: 'center',
@@ -71,14 +72,12 @@ const Header = ({location}: {location: Location}) => (
             },
             [media.lessThan('small')]: {
               flex: '0 0 auto',
-            },
-          }}
-          to="/">
+            }}
+            } >
+            <img src={scandiPWA} alt="" id="HeaderImg" css={{ width: "180px", height: "180px",  }}   />
+          </div>
 
-
-          <img src={scandiPWA} alt="" id="HeaderImg" css={{ width: "180px", height: "180px",  }}   />
-
-        </Link>
+        {/* // </Link> */}
 
         <nav
           css={{
@@ -108,6 +107,9 @@ const Header = ({location}: {location: Location}) => (
             [media.lessThan('small')]: {
               maskImage:
                 'linear-gradient(to right, transparent, black 20px, black 90%, transparent)',
+            },
+            [media.greaterThan('large')]: {
+              marginLeft: 100,
             },
           }}>
           {navHeader.items.map(link => (

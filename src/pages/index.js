@@ -20,6 +20,7 @@ import {babelURL} from 'site-constants';
 // import logoWhiteSvg from 'icons/logo-white.svg';
 
 class Home extends Component {
+  
   state = {
     babelLoaded: false,
   };
@@ -50,7 +51,7 @@ class Home extends Component {
     return (
       <Layout location={location}>
         <TitleAndMetaTags
-          title="React &ndash; A JavaScript library for building user interfaces"
+          title="ScandiPWA &ndash; Docs"
           canonicalUrl={createCanonicalUrl('/')}
         />
         <div

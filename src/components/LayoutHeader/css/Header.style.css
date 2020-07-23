@@ -1,6 +1,18 @@
 
-@media screen and (max-width: 1200px) {
+#HeaderImg {
+    position: absolute;
+    left: 8%;
+}
+
+@media screen and (max-width: 1920px) {
+    #HeaderImg {
+        left: 10%;
+    }
+}
+
+@media screen and (max-width: 980px) {
     #HeaderImg {
         display: none;
     }
 }
+

@@ -8,7 +8,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'React: A JavaScript library for building user interfaces',
+    title: 'ScandiPWA - Docs',
     siteUrl: 'https://reactjs.org',
     rssFeedTitle: 'React',
     rssFeedDescription: 'A JavaScript library for building user interfaces',
