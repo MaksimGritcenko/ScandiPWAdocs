@@ -74,7 +74,7 @@ class StickyResponsiveSidebar extends Component<Props, State> {
             transition: 'opacity 0.5s ease',
           }}
           css={{
-            [media.lessThan('small')]: smallScreenSidebarStyles,
+            [media.lessThan('medium')]: smallScreenSidebarStyles,
 
             [media.greaterThan('medium')]: {
               marginRight: -999,
@@ -90,7 +90,7 @@ class StickyResponsiveSidebar extends Component<Props, State> {
               height: '100%',
             },
 
-            [media.greaterThan('small')]: {
+            [media.greaterThan('large')]: {
               position: 'fixed',
               zIndex: 2,
               // height: 'calc(100vh - 60px)',
@@ -162,6 +162,7 @@ class StickyResponsiveSidebar extends Component<Props, State> {
             border: '1px solid rgba(255, 255, 255, 0.1)',
             boxShadow: '0 0 20px rgba(0, 0, 0, 0.3)',
             [media.lessThan('small')]: smallScreenBottomBarStyles,
+            
           }}
           onClick={this._openNavMenu}
           role="button"

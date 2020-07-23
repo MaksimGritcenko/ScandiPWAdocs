@@ -11,7 +11,7 @@ export type Author = {
 };
 
 export type Node = {
-  excerpt: string,
+  except: string,
   fields: {
     date?: string,
     path: string,

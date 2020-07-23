@@ -12,6 +12,7 @@ import Footer from 'components/LayoutFooter';
 import Header from 'components/LayoutHeader';
 import {media} from 'theme';
 
+
 patchDOMForGoogleTranslate();
 
 type Props = {
@@ -38,7 +39,8 @@ class Template extends Component<Props> {
         css={{
           display: 'flex',
           flexDirection: 'column',
-          minHeight: 'calc(100vh - 40px)',
+          minHeight: '100%',
+          height: '100%'
         }}>
         <Header location={location} />
         <Flex
