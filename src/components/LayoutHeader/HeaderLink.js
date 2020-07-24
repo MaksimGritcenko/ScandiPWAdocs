@@ -57,11 +57,14 @@ const style = {
     paddingLeft: 20,
     paddingRight: 20,
     fontSize: 18,
-
     ':hover:not(:focus)': {
       color: colors.brand,
     },
   },
+  [media.greaterThan('xxlarge')]: {
+    paddingLeft: 30,
+    paddingRight: 30,
+  }
 };
 
 const activeStyle = {

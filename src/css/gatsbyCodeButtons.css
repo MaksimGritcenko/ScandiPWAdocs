@@ -1,0 +1,20 @@
+.gatsby-code-button-container {
+    touch-action: none;
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    top: 28px;
+    z-index: 1;
+    pointer-events: none; }
+  
+  .gatsby-code-button {
+    cursor: pointer;
+    pointer-events: initial; }
+    .gatsby-code-button[data-tooltip]:after {
+      top: 26px;
+      right: 0; }
+    .gatsby-code-button[data-tooltip]:hover:after, .gatsby-code-button[data-tooltip]:focus:after {
+      visibility: visible;
+      display: block;
+      z-index: 200; }
+  

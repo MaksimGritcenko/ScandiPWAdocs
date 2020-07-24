@@ -7,6 +7,7 @@
     height: 150px;
     padding-top: 50px;
     padding-bottom: 50px;
+    z-index: -1;
 }
 
 .Footer-Links {
@@ -61,18 +62,9 @@
 } */
 
 
-@media screen and (max-width: 992px) {
-
-    .Footer-Link {
-        margin-right: 10px;
-    }
-
-    .Footer-Links {
-
-    }
-
-    .Footer-Copyright {
-
+@media (max-width: 1340px) and (min-width: 980px) {
+    .Footer-Wrapper {
+        flex-direction: column;
     }
 }
 
@@ -90,6 +82,7 @@
     }
     .Footer-Wrapper {
         flex-direction: column;
+
     }
 
     .Footer {
@@ -99,7 +92,10 @@
     }
 
     .Footer-Links {
-        flex-direction: col;
+        flex-direction: column;
+    }
+    .Footer-Link {
+        margin-bottom: 5px;
     }
 
     .Footer-Copyright {

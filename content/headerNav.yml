@@ -8,7 +8,7 @@ items:
     to: https://scandipwa.com/community.html
   - title: Docs
     # to: /docs/getting-started.html
-    to: /docs/linux.html
+    to: /scandipwa/docs/linux.html
     activeSelector: /docs/
   - title: Partners
     to: https://scandipwa.com/partners.html

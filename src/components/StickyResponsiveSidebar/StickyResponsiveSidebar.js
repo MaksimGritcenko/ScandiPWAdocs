@@ -87,19 +87,19 @@ class StickyResponsiveSidebar extends Component<Props, State> {
             [media.between('medium', 'sidebarFixed', true)]: {
               position: 'fixed',
               zIndex: 2,
-              height: '100%',
+              height: 'calc(100vh - 60px)',
             },
 
             [media.greaterThan('large')]: {
               position: 'fixed',
               zIndex: 2,
               // height: 'calc(100vh - 60px)',
-              height: '100%',
+              height: 'calc(100vh - 60px)',
               overflowY: 'auto',
               WebkitOverflowScrolling: 'touch',
               marginRight: -999,
-              paddingLeft: 60,
-              paddingRight: 60,
+              paddingLeft: 40,
+              paddingRight: 0,
               left: 0,
               backgroundColor: '#f7f7f7',
               opacity: '1 !important',
@@ -107,12 +107,16 @@ class StickyResponsiveSidebar extends Component<Props, State> {
 
             [media.size('small')]: {
               // height: 'calc(100vh - 40px)',
-              height: '100%',
+              height: 'calc(100vh - 60px)',
+            },
+            [media.lessThan('small')]: {
+              // height: 'calc(100vh - 40px)',
+              height: 'calc(100vh - 60px)',
             },
 
             [media.between('medium', 'large')]: {
               // height: 'calc(100vh - 50px)',
-              height: '100%',
+              height: 'calc(100vh - 60px)',
             },
 
             [media.greaterThan('sidebarFixed')]: {
@@ -161,8 +165,12 @@ class StickyResponsiveSidebar extends Component<Props, State> {
             borderRadius: '50%',
             border: '1px solid rgba(255, 255, 255, 0.1)',
             boxShadow: '0 0 20px rgba(0, 0, 0, 0.3)',
-            [media.lessThan('medium')]: smallScreenBottomBarStyles,
-            
+            [media.lessThan('large')]: {
+              ...smallScreenBottomBarStyles,
+              },
+              [media.lessThan('medium')]: {
+                zIndex: '102',
+            },
           }}
           onClick={this._openNavMenu}
           role="button"
@@ -191,6 +199,10 @@ class StickyResponsiveSidebar extends Component<Props, State> {
                   display: 'flex',
                   flexDirection: 'column',
                   color: colors.brand,
+                  [media.greaterThan('medium')]: {
+                    left: '50%',
+                    transform: 'translateX(-20%)'
+                  }
                 }}>
                 <ChevronSvg
                   size={15}

@@ -7,6 +7,7 @@
 'use strict';
 
 module.exports = {
+  pathPrefix: "/scandipwa",
   siteMetadata: {
     title: 'ScandiPWA - Docs',
     siteUrl: 'https://reactjs.org',
@@ -48,7 +49,13 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          'gatsby-remark-code-buttons',
+          {
+            resolve: 'gatsby-remark-code-buttons',
+            options: {
+              buttonContainerClass: `customButtonContainerClass`,
+              buttonClass: `customButtonClass`,
+            }
+          },
           'gatsby-remark-responsive-iframe',
           {
             resolve: 'gatsby-remark-images',

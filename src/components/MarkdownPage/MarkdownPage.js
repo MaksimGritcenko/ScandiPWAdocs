@@ -102,7 +102,7 @@ const MarkdownPage = ({
             <Flex type="article"
                   direction="column"
                   grow="1"
-                  halign="flex-start"
+                  halign="center"
                   id="flex">
               <MarkdownHeader title={titlePrefix} />
 

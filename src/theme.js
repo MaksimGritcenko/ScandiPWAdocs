@@ -35,7 +35,8 @@ const SIZES = {
   medium: {min: 780, max: 979},
   large: {min: 980, max: 1279},
   xlarge: {min: 1280, max: 1339},
-  xxlarge: {min: 1340, max: Infinity},
+  xxlarge: {min: 1340, max: 1699},
+  xxxlarge: {min: 1700, max: 1999},
 
   // Sidebar/nav related tweakpoints
   largerSidebar: {min: 1100, max: 1339},
@@ -94,7 +95,7 @@ const fonts = {
       wordBreak: 'break-word',
     },
 
-    [media.lessThan('medium')]: {
+    [media.lessThan('large')]: {
       fontSize: 40,
       lineHeight: '45px',
     },
@@ -135,9 +136,25 @@ const sharedStyles = {
 
       display: 'flex',
       minHeight: 'calc(100vh - 60px)',
+      [media.greaterThan('large')]: {
+        maxWidth: 700,
+        transform: 'translateX(60%)',
+      },
+      [media.greaterThan('xlarge')]: {
+        maxWidth: 800,
+        transform: 'translateX(65%)',
+      },
+      [media.greaterThan('xxlarge')]: {
+        maxWidth: 850,
+        transform: 'translateX(50%)',
+      },
+      [media.greaterThan('xxxlarge')]: {
+        maxWidth: 1000,
+        transform: 'translateX(45%)',
+      },
       [media.greaterThan('sidebarFixed')]: {
-        maxWidth: 840,
-        marginLeft: '0',
+        maxWidth: 1300,
+        transform: 'translateX(45%)',
       },
       [media.lessThan('small')]: {
         flexDirection: 'column',
@@ -146,20 +163,31 @@ const sharedStyles = {
     content: {
       marginTop: 40,
       marginBottom: 120,
-
+      [media.greaterThan('xsmall')]: {
+        marginTop: 50,
+        marginRight: 50,
+        marginLeft: 50,
+      },
       [media.greaterThan('medium')]: {
         marginTop: 50,
       },
       [media.greaterThan('large')]: {
-        marginRight: 200,
+        marginRight: 100,
         marginTop: 100, // BLM
-        marginLeft: 240,
+        marginLeft: 120,
+      },
+      [media.greaterThan('xxxlarge')]: {
+        marginRight: 100,
+        marginTop: 200, // BLM
+        marginLeft: 100,
+        // width: 1500,
+        // marginLeft: '30%',
+        // marginRight: '5%',
       },
     },
     sidebar: {
       display: 'flex',
       flexDirection: 'column',
-
       [media.between('small', 'sidebarFixed')]: {
         borderLeft: '1px solid #ececec',
         marginLeft: 80,
@@ -172,6 +200,9 @@ const sharedStyles = {
 
       [media.between('small', 'medium')]: {
         marginLeft: 40,
+      },
+      [media.greaterThan('large')]: {
+        
       },
 
       [media.greaterThan('largerSidebar')]: {

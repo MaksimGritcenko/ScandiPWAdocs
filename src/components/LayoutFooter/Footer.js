@@ -20,10 +20,9 @@ const Footer = ({ layoutHasSidebar }) => {
     css={{
       backgroundColor: colors.darker,
       color: colors.white,
-      [media.between('large', 'xlarge')]: layoutHasSidebar && {
+      [media.between('large', 'xxlarge')]: layoutHasSidebar && {
         position: 'relative',
-        left: '30%',
-        zIndex: '-1',
+        left: '0%',
       },
       '@media print': {
         display: 'none',

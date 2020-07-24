@@ -34,7 +34,7 @@ micro_nav:
     node -v # should be 10^
 ```
 
-    In case this command resulted in error, install node using the [official guide](https://nodejs.org/en/download/package-manager/). Prefer `nvm` installation to get NODE version 10 specifically.
+In case this command resulted in error, install node using the [official guide](https://nodejs.org/en/download/package-manager/). Prefer `nvm` installation to get NODE version 10 specifically.
 
 4. Make sure the `Varnish` is installed on the host / infrastructure and Magento is configured to use it. Please validate with following:
 
@@ -42,11 +42,11 @@ micro_nav:
     varnishd -V # should be 5^
 ```
 
-    In Magento admin go to _Stores > Configuration > Advanced > System > Full Page Cache_. Make sure the `Varnish Cache` is selected in the dropdown, varnish configuration has proper values set in it.
+In Magento admin go to _Stores > Configuration > Advanced > System > Full Page Cache_. Make sure the `Varnish Cache` is selected in the dropdown, varnish configuration has proper values set in it.
 
-    If it is not, please follow [official documentation](https://devdocs.magento.com/guides/v2.3/config-guide/varnish/config-varnish.html) to set it up.
+If it is not, please follow [official documentation](https://devdocs.magento.com/guides/v2.3/config-guide/varnish/config-varnish.html) to set it up.
 
-    > **Note**: varnish is important! Please validate if it is installed with your hosting provider / developer.
+> **Note**: varnish is important! Please validate if it is installed with your hosting provider / developer.
 
 5. Make sure the `Redis` is installed on your host / infrastructure. To validate the installation run following:
 
@@ -54,9 +54,9 @@ micro_nav:
     redis-cli -v # should output 2.5^
 ```
 
-    If it is not installed, please follow [this guide](https://codewithhugo.com/install-just-redis-cli-on-ubuntu-debian-jessie/) to obtain it.
+If it is not installed, please follow [this guide](https://codewithhugo.com/install-just-redis-cli-on-ubuntu-debian-jessie/) to obtain it.
 
-    > **Note**: steps 5. and 6. are the requirements of `scandipwa/persisted-query` package.
+> **Note**: steps 5. and 6. are the requirements of `scandipwa/persisted-query` package.
 
 6. Important instance specific configurations:
 
@@ -78,17 +78,17 @@ micro_nav:
     php bin/magento setup:config:set <FLAG> <VALUE>
 ```
 
-    - `--pq-host` [mandatory] - persisted query redis host  (`redis` for ScandiPWA docker setup, `localhost` in the most common custom setup case)
+- `--pq-host` [mandatory] - persisted query redis host  (`redis` for ScandiPWA docker setup, `localhost` in the most common custom setup case)
 
-    - `--pq-port` [mandatory] - persisted query redis port (`6379` for ScandiPWA docker setup)
+- `--pq-port` [mandatory] - persisted query redis port (`6379` for ScandiPWA docker setup)
 
-    - `--pq-database` [mandatory] - persisted query redis database (`5` for ScandiPWA docker setup)
+- `--pq-database` [mandatory] - persisted query redis database (`5` for ScandiPWA docker setup)
 
-    - `--pq-scheme` [mandatory] - persisted query redis scheme (set to `tcp` in not sure)
+- `--pq-scheme` [mandatory] - persisted query redis scheme (set to `tcp` in not sure)
 
-    - `--pq-password` [optional, **empty password is not allowed**] - persisted query redis password
+- `--pq-password` [optional, **empty password is not allowed**] - persisted query redis password
 
-    Alternatively, set those configurations directly in `app/etc/env.php` under `cache` key:
+Alternatively, set those configurations directly in `app/etc/env.php` under `cache` key:
 
 ```php
     'cache' => [
@@ -111,7 +111,7 @@ micro_nav:
     php bin/magento scandipwa:theme:bootstrap <YOUR VENDOR>/<YOUR THEME>
 ```
 
-    > **Note**: If the name is different from `Scandiweb/pwa`, edit the `<THEME ROOT>/src/config/webpack.production.config.js` configuration file. Specifically update the `publicPath` constant declaration to match `<YOUR VENDOR>/<YOUR THEME>`.
+> **Note**: If the name is different from `Scandiweb/pwa`, edit the `<THEME ROOT>/src/config/webpack.production.config.js` configuration file. Specifically update the `publicPath` constant declaration to match `<YOUR VENDOR>/<YOUR THEME>`.
 
 4. Go to the bootstrapped theme folder, and install the dependencies and compile a project:
 

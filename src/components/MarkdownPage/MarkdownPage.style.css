@@ -1,8 +1,9 @@
 #flex {
-    justify-content: flex-end;
+
+
 }
 
-@media screen and (max-width: 2000px) {
+/* @media screen and (min-width: 1701px) {
     #flex {
         position: relative;
         left: 150px;
@@ -27,4 +28,4 @@
         position: relative;
         left: 0;
     }
-}
+} */

@@ -67,6 +67,8 @@
       title: How to Contribute
     - id: migrate-newer-version
       title: How to Migrate to a Newer Version
+    - id: on-existing-m2
+      title: How to Install Theme on Existing Magento 2 Server
     - id: coding-standard
       title: BEM and Coding Standards
     - id: react-best-practices
