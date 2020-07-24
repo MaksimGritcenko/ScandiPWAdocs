@@ -48,21 +48,7 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          // {
-          //   resolve: 'gatsby-remark-code-buttons',
-          //   options: {
-          //     buttonContainerClass: `customButtonContainerClass`,
-          //     buttonClass: `customButtonClass`,
-          //     buttonText: `customButtonText`,
-          //     svgIconClass: `customSvgIconClass`,
-          //     svgIcon: `customSvgIcon`,
-          //     tooltipText: `customTooltipText`,
-          //     toasterClass: `customToasterClass`,
-          //     toasterTextClass: `customToasterTextClass`,
-          //     toasterText: 'customToasterText',
-          //     toasterDuration: 5000
-          //   }
-          // },
+          'gatsby-remark-code-buttons',
           'gatsby-remark-responsive-iframe',
           {
             resolve: 'gatsby-remark-images',

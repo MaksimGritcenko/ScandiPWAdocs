@@ -7,12 +7,8 @@
 
 import Container from 'components/Container';
 import HeaderLink from './HeaderLink';
-import {Link} from 'gatsby';
 import React from 'react';
 import {colors, fonts, media} from 'theme';
-import {version} from 'site-constants';
-import ExternalLinkSvg from 'templates/components/ExternalLinkSvg';
-import DocSearch from './DocSearch';
 import './css/Header.style.css'
 
 // $FlowFixMe
@@ -46,6 +42,7 @@ const Header = ({location}: {location: Location}) => (
           height: 60,
           [media.between('small', 'large')]: {
             height: 60,
+            paddingRight: 80,
           },
           [media.lessThan('small')]: {
             height: 60,
@@ -74,7 +71,7 @@ const Header = ({location}: {location: Location}) => (
               flex: '0 0 auto',
             }}
             } >
-            <img src={scandiPWA} alt="" id="HeaderImg" css={{ width: "180px", height: "180px",  }}   />
+            <img src={scandiPWA} alt="" id="HeaderImg" css={{ width: "180px"}}   />
           </div>
 
         {/* // </Link> */}

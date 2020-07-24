@@ -17,6 +17,7 @@ import toCommaSeparatedList from 'utils/toCommaSeparatedList';
 import {sharedStyles} from 'theme';
 import createCanonicalUrl from 'utils/createCanonicalUrl';
 import './MarkdownPage.style.css'
+import Footer from './../LayoutFooter/Footer'
 
 import type {Node} from 'types';
 
@@ -132,25 +133,16 @@ const MarkdownPage = ({
                   css={[sharedStyles.markdown]}
                   dangerouslySetInnerHTML={{__html: markdownRemark.html}}
                 />
-
-                {markdownRemark.fields.path && (
-                  <div css={{marginTop: 80}}>
-                    <a
-                      css={sharedStyles.articleLayout.editLink}
-                      href={`https://github.com/reactjs/reactjs.org/tree/master/${markdownRemark.fields.path}`}>
-                      Edit this page
-                    </a>
-                  </div>
-                )}
               </div>
+              {(next || prev) && (
+        <NavigationFooter location={location} next={next} prev={prev} />
+      )}
             </Flex>
           </div>
         </Container>
       </div>
 
-      {(next || prev) && (
-        <NavigationFooter location={location} next={next} prev={prev} />
-      )}
+      
     </Flex>
   );
 };

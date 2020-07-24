@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import './HomePage.style.css'
 import stocksGrowth from './../../images/homeImages/hero-pic.png'
+import { colors } from './../../../src/theme'
 
 
 
@@ -11,7 +12,7 @@ export class HomePage extends Component {
             <section className="Home">
                 <div className="Home-Content">
 
-                    <div className="Home-Head">
+                    <div className="Home-Head" css={{color: colors.brand}}>
                         <h2>
                             Ready-to-use PWA theme for Magento!
                         </h2>

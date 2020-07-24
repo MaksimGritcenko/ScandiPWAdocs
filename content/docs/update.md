@@ -22,10 +22,10 @@ micro_nav:
 
 1. Update the theme in `vendor`
 
-    ```bash
+```bash
     # Update the theme and all of its dependencies
     composer update scandipwa/*
-    ```
+```
 
 2. If the release note says something has been changed in the configuration, manually update the `src/config` folder in your customisations folder (default `app/design/frontend/.....`), merging in all the changes from the new version. This process does not happen automatically. Be careful when doing that, the project may not work at all or work incorrectly with broken configuration. If the project does not work after an upgrade, outdated `config` folder is often the cause.
 
@@ -41,8 +41,8 @@ micro_nav:
 
 2. Launch the project and run the following command
 
-    ```bash
+```bash
     composer install
-    ```
+```
 
 3. Go through all the steps of updating to the latest minor except the first one.

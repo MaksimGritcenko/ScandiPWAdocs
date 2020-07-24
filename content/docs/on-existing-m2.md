@@ -30,17 +30,17 @@ micro_nav:
 
 3. Make sure you have `node` available on you machine. To test this, run:
 
-    ```bash
+```bash
     node -v # should be 10^
-    ```
+```
 
     In case this command resulted in error, install node using the [official guide](https://nodejs.org/en/download/package-manager/). Prefer `nvm` installation to get NODE version 10 specifically.
 
 4. Make sure the `Varnish` is installed on the host / infrastructure and Magento is configured to use it. Please validate with following:
 
-    ```bash
+```bash
     varnishd -V # should be 5^
-    ```
+```
 
     In Magento admin go to _Stores > Configuration > Advanced > System > Full Page Cache_. Make sure the `Varnish Cache` is selected in the dropdown, varnish configuration has proper values set in it.
 
@@ -50,9 +50,9 @@ micro_nav:
 
 5. Make sure the `Redis` is installed on your host / infrastructure. To validate the installation run following:
 
-    ```bash
+```bash
     redis-cli -v # should output 2.5^
-    ```
+```
 
     If it is not installed, please follow [this guide](https://codewithhugo.com/install-just-redis-cli-on-ubuntu-debian-jessie/) to obtain it.
 
@@ -66,17 +66,17 @@ micro_nav:
 
 1. Install `scandipwa/installer` using following command:
 
-    ```bash
+```bash
     composer require scandipwa/installer
-    ```
+```
 
 2. Configure `scandipwa/persisted-query` module, using Magento CLI:
 
     Execute the CLI command for each configuration value as follows:
 
-    ```bash
+```bash
     php bin/magento setup:config:set <FLAG> <VALUE>
-    ```
+```
 
     - `--pq-host` [mandatory] - persisted query redis host  (`redis` for ScandiPWA docker setup, `localhost` in the most common custom setup case)
 
@@ -90,7 +90,7 @@ micro_nav:
 
     Alternatively, set those configurations directly in `app/etc/env.php` under `cache` key:
 
-    ```php
+```php
     'cache' => [
         'persisted-query' => [
             'redis' => [
@@ -101,25 +101,25 @@ micro_nav:
             ]
         ]
     ]
-    ```
+```
 
 3. Install the ScandiPWA theme:
 
     > **Note**: by default for `<YOUR VENDOR>/<YOUR THEME>` we are using `Scandiweb/pwa`. But you can choose any other one.
 
-    ```bash
+```bash
     php bin/magento scandipwa:theme:bootstrap <YOUR VENDOR>/<YOUR THEME>
-    ```
+```
 
     > **Note**: If the name is different from `Scandiweb/pwa`, edit the `<THEME ROOT>/src/config/webpack.production.config.js` configuration file. Specifically update the `publicPath` constant declaration to match `<YOUR VENDOR>/<YOUR THEME>`.
 
 4. Go to the bootstrapped theme folder, and install the dependencies and compile a project:
 
-    ```bash
+```bash
     cd app/design/frontend/<YOUR VENDOR>/<YOUR THEME>
     npm ci # install dependencies
     npm run build
-    ```
+```
 
 5. Time to change Magento theme:
 

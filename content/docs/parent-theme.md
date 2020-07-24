@@ -50,7 +50,7 @@ ScandiPWA v3 (currently in beta) supports implementing parent themes, which allo
 
     - Extending files. First you need to import something you want to extend. To import files from parent theme use the alias `Parent<...>`, to import from source theme use the alias `Source<...>`. E.g. to import `AddToCart` component (and extend it) use the following:
 
-    ```javascript
+```javascript
     // To extend source component
     import SourceAddToCart from 'SourceComponent/AddToCart';
     class AddToCart extends SourceAddToCart { ... }
@@ -58,7 +58,7 @@ ScandiPWA v3 (currently in beta) supports implementing parent themes, which allo
     // Or to extend parent theme's component
     import ParentAddToCart from 'ParentComponent/AddToCart';
     class AddToCart extends ParentAddToCart { ... }
-    ```
+```
 
     - Using components. To import component and use it somewhere in your application (not to extend it) use the regular `Component/<ComponentName>` alias. When resolving a file, Fallback plugin is going to look in the following directories subsequently:
 

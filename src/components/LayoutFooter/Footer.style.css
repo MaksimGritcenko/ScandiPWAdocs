@@ -45,6 +45,22 @@
 }
 
 
+/* @media screen and (max-width: 1700px) {
+    .Footer {
+        position: relative;
+        left: 30%;
+    }
+}
+
+
+@media screen and (max-width: 980px) {
+    .Footer {
+        position: block;
+        left: 0;
+    }
+} */
+
+
 @media screen and (max-width: 992px) {
 
     .Footer-Link {

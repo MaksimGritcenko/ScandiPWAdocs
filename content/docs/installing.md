@@ -168,11 +168,11 @@ If the output of this command is empty, or, if the output (JSON object) does not
 
    3. Now, using the following template, set the environment variable:
 
-       ```bash
+   ```bash
        export COMPOSER_AUTH='{"http-basic":{"repo.magento.com": {"username": "<PUBLIC KEY FROM MAGENTO MARKETPLACE>", "password": "<PRIVATE KEY FROM MAGENTO MARKETPLACE>"}}}'
-       ```
+   ```
 
-       To set the environment variables follow [this guide](https://www.serverlab.ca/tutorials/linux/administration-linux/how-to-set-environment-variables-in-linux/). Make sure to make them persist (stay between reloads).
+To set the environment variables follow [this guide](https://www.serverlab.ca/tutorials/linux/administration-linux/how-to-set-environment-variables-in-linux/). Make sure to make them persist (stay between reloads).
 
 If upon ispection you see a different error:
 
@@ -362,9 +362,9 @@ This could indicate to current Magento version not matching the the latest versi
 
 - For Magento versions below 2.3.3 please use installer ^1.0. Use following command:
 
-    ```bash
+```bash
     composer require scandipwa/installer ^1.0
-    ```
+```
 
 > **Note**: This will install older versions of ScandiPWA, and we suggest to upgrade Magento to 2.3.3 to make it possible to use latest ScandiPWA versions.
 
@@ -374,9 +374,9 @@ If the customization selected in the BE configuration (_Stores > Configuration >
 
 - Update the customization module to `1.0.1^` using following command:
 
-    ```bash
+```bash
     composer update scandipwa/customization
-    ```
+```
 
 - Alternatively, make sure, there exists at least one:
   - CMS block
@@ -413,21 +413,21 @@ If after following all steps of installation the `Luma` or other default theme k
 
 1. On the server (in the container) the theme folder (`app/design/frontend/<VENDOR>/<NAME>`, in docker-setup `app/design/frontend/Scandiweb/pwa`) has the folder named `Magento_Theme` inside. This folder must not be empty. It should contain two other folders. If this is not true, from themes root folder execute:
 
-    ```bash
+```bash
     npm ci && npm run build
-    ```
+```
 
-    This should install and compile the theme, after command execution, the folder should appear. If it does not - you might have stumbled upon some compilation issue, please read the compilation logs to found out where and why.
+This should install and compile the theme, after command execution, the folder should appear. If it does not - you might have stumbled upon some compilation issue, please read the compilation logs to found out where and why.
 
 2. The theme is set in admin. To check the _Content > Design > Themes_ (from Magento admin) and make sure your store has a ScandiPWA theme set.
 
 3. In case all of above are true, but the theme is not appearing, please execute following:
 
-    ```bash
+```bash
     magento c:f
-    ```
+```
 
-    Check the frontend again after that.
+Check the frontend again after that.
 
 ## Invalid regular expression: missing /
 
@@ -458,39 +458,39 @@ You have executed the installation in the wrong order. First must come the **pro
 
 1. Removed the theme folder, remove the `<THEME_VENDOR_NAME>/<THEME_NAME>` (by default `Scandiweb/pwa`), like this:
 
-    ```bash
+```bash
     rm -rf <PATH_TO_THEME_FOLDER>
-    ```
+```
 
 2. Re-run the setup in **production**-like mode:
 
-    ```bash
+```bash
     # if you have the alias set up
     dc up -d --remove-orphans
 
     # without aliases (not recommended)
     docker-compose -f docker-compose.yml -f docker-compose.local.yml -f docker-compose.ssl.yml up -d --remove-orphans
-    ```
+```
 
 3. Wait until the application finishes starting, using the following command:
 
-    ```bash
+```bash
     # if you have the alias set up
     applogs
 
     # without aliases (not recommended)
     docker-compose logs -f --tail=100 app
-    ```
+```
 
 4. Re-run the **development** setup:
 
-    ```bash
+```bash
     # if you have the alias set up
     dcf up -d --remove-orphans
 
     # without aliases (not recommended)
     docker-compose -f docker-compose.yml -f docker-compose.local.yml -f docker-compose.ssl.yml -f docker-compose.frontend.yml up -d --remove-orphans
-    ```
+```
 
 > Remember, initial project setup must happen in **production**-like mode. Only later (on next run) you can switch to **development**.
 

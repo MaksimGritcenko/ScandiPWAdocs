@@ -106,11 +106,11 @@ Below is a detailed list of them.
 
 * **Unknown attributes with string, number, and object values:**  
 
-    ```js
+```js
     <div mycustomattribute="value" />
     <div mycustomattribute={42} />
     <div mycustomattribute={myObject} />
-    ```
+```
 
     React 15: Warns and ignores them.  
     React 16: Converts values to strings and passes them through.
@@ -119,10 +119,10 @@ Below is a detailed list of them.
 
 * **Known attributes with a different canonical React name:**  
 
-    ```js
+```js
     <div tabindex="-1" />
     <div class="hi" />
-    ```
+```
 
     React 15: Warns and ignores them.  
     React 16: Warns but converts values to strings and passes them through.
@@ -131,36 +131,36 @@ Below is a detailed list of them.
 
 * **Non-boolean attributes with boolean values:**  
 
-    ```js
+```js
     <div className={false} />
-    ```
+```
 
     React 15: Converts booleans to strings and passes them through.  
     React 16: Warns and ignores them.
 
 * **Non-event attributes with function values:**  
 
-    ```js
+```js
     <div className={function() {}} />
-    ```
+```
 
     React 15: Converts functions to strings and passes them through.  
     React 16: Warns and ignores them.
 
 * **Attributes with Symbol values:**
 
-    ```js
+```js
     <div className={Symbol('foo')} />
-    ```
+```
 
     React 15: Crashes.  
     React 16: Warns and ignores them.
 
 * **Attributes with `NaN` values:**
 
-    ```js
+```js
     <div tabIndex={0 / 0} />
-    ```
+```
 
     React 15: Converts `NaN`s to strings and passes them through.  
     React 16: Converts `NaN`s to strings and passes them through with a warning.

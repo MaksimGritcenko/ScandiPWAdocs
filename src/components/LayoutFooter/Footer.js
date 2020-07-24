@@ -7,14 +7,24 @@
 
 import Container from 'components/Container';
 import React from 'react';
-import {colors, media} from 'theme';
+import {colors} from 'theme';
 import './Footer.style.css'
+import { media } from 'theme'
 
-const Footer = () => (
-  <footer className="Footer"
+const Footer = ({ layoutHasSidebar }) => {
+  
+
+
+  return(
+    <footer className="Footer"
     css={{
       backgroundColor: colors.darker,
       color: colors.white,
+      [media.between('large', 'xlarge')]: layoutHasSidebar && {
+        position: 'relative',
+        left: '30%',
+        zIndex: '-1',
+      },
       '@media print': {
         display: 'none',
       },
@@ -53,13 +63,7 @@ const Footer = () => (
               {`© ${new Date().getFullYear()} ScandiPWA. All Rights Reserved`}
              </p>
             </div>
-            
-
         </div>
-
-
-
-
         <section
           css={{
             paddingTop: 0,
@@ -68,8 +72,8 @@ const Footer = () => (
           }}>
             <div className="Footer-Image">
               <svg xmlns="http://www.w3.org/2000/svg" width="206" height="50" viewBox="0 0 206 50">
-                <g fill="none" fill-rule="evenodd"><text fill="#707070" font-family="Montserrat-SemiBold, Montserrat" font-size="12"
-                font-weight="500" letter-spacing="-.1">
+                <g fill="none" fillRule="evenodd"><text fill="#707070" fontFamily="Montserrat-SemiBold, Montserrat" fontSize="12"
+                fontWeight="500" letterSpacing="-.1">
                 <tspan x="0" y="47">The first PWA theme for Magento</tspan>
                 </text>
                 <path fill="#bbbbbb"
@@ -85,6 +89,8 @@ const Footer = () => (
       </div>
     </Container>
   </footer>
-);
+)
+}
+
 
 export default Footer;

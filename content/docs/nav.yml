@@ -24,24 +24,6 @@
       title: Development
     - id: installing
       title: Installation
-# - title: Development
-#   items:
-#     - id: tools
-#       title: Preparing the tools
-#     - id: file-structure
-#       title: File structure
-#     - id: data-flow
-#       title: Data-flow diagram
-#     - id: extension
-#       title: Extension mechanism
-#     - id: plugin-mechanism
-#       title: Plugin mechanism
-#     - id: debugging
-#       title: Debugging guide
-#     - id: coding-standard
-#       title: Coding Standard
-#     - id: parent-theme
-#       title: Parent theme
 - title: Tutorials - Introductory
   # isOrdered: true
   items:

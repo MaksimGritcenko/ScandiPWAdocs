@@ -65,7 +65,7 @@ You create a file with the same name, under the same folder - reference the `ven
 
 4. The file is created, what next? Time to write some JavaScript. The main idea for extension - you are replacing the file, so all exposed "API"s especially `export` must be preserved. The general template looks as follows:
 
-    ```javascript
+```javascript
     import { /** Exports I plan to modify or reuse */ } from '<PATH TO SOURCE COMPONENT>';
 
     // TODO: implement the modifications to imported parts
@@ -75,15 +75,15 @@ You create a file with the same name, under the same folder - reference the `ven
     export { /** Exports I have overridden */ };
 
     export default /** copy the original default export */;
-    ```
+```
 
-    Following notes apply:
+Following notes apply:
 
-    1. The `<PATH TO SOURCE COMPONENT>` **MUST** refer to file, not the folder, i.e. instead of: `component/Header` write `component/Header/Header.component`.
+1. The `<PATH TO SOURCE COMPONENT>` **MUST** refer to file, not the folder, i.e. instead of: `component/Header` write `component/Header/Header.component`.
 
-    2. The default export must be preserved - the new, extended class must contain the same logic, i.e. if I have following in the code: `export default connect(mapStateToProps, mapDispatchToProps)(Header);` I must import the connect from redux (just like in source component), `mapStateToProps` and `mapDispatchToProps` from source file I am extending, and ensure my component, contains the same default export.
+2. The default export must be preserved - the new, extended class must contain the same logic, i.e. if I have following in the code: `export default connect(mapStateToProps, mapDispatchToProps)(Header);` I must import the connect from redux (just like in source component), `mapStateToProps` and `mapDispatchToProps` from source file I am extending, and ensure my component, contains the same default export.
 
-    3. Importing `import { A } from '...';` is not similar to: `import A from '...';` first code imports the named export, second - default export. You most probably want to **use the named export** (the first option, with curly brackets).
+3. Importing `import { A } from '...';` is not similar to: `import A from '...';` first code imports the named export, second - default export. You most probably want to **use the named export** (the first option, with curly brackets).
 
 Let's now consider a common cases, to prove the algorithm works.
 
@@ -226,7 +226,7 @@ For styles nothing changes. You create a file under the same name and it gets in
 
 1. Create the file importing original styles, like this:
 
-    ```scss
+```scss
     // In case you made no changes
     @import '../../../../../../../../../vendor/scandipwa/source/src/app/style/abstract/variables';
     @import '../../../../../../../../../vendor/scandipwa/source/src/app/style/abstract/media';
@@ -239,14 +239,14 @@ For styles nothing changes. You create a file under the same name and it gets in
 
     // Here, you can add your files
     @import './my-abstract-style';
-    ```
+```
 
 2. In both webpack configurations (`webpack.development.config.js`, `webpack.production.config.js`) change following line:
 
-    ```js
+```js
     path.resolve(fallbackRoot, 'src', 'app', 'style', 'abstract', '_abstract.scss') // from "fallbackRoot"
     path.resolve(projectRoot, 'src', 'app', 'style', 'abstract', '_abstract.scss') // to "projectRoot"
-    ```
+```
 
 ## Overriding templates (HTML, pHTML)
 
@@ -258,7 +258,7 @@ ScandiPWA has a long-standing bug - the templates are impossibble to override. F
 
 2. Change their webpack import declarations. In both webpack configurations (`webpack.development.config.js`, `webpack.production.config.js`) change following line:
 
-    ```js
+```js
     // In the "webpack.production.config.js"
     path.resolve(projectRoot, 'src', 'public', 'index.production.phtml') // from "index.production.phtml"
     path.resolve(projectRoot, 'src', 'public', 'index.production.phtml') // to "my-index.production.phtml"
@@ -266,19 +266,19 @@ ScandiPWA has a long-standing bug - the templates are impossibble to override. F
     // In the "webpack.development.config.js"
     path.resolve(projectRoot, 'src', 'public', 'index.development.html') // from "index.development.html"
     path.resolve(projectRoot, 'src', 'public', 'my-index.development.html') // to "my-index.development.html"
-    ```
+```
 
 3. Reload the webpack. If using docker the following command should be executed:
 
-    ```bash
+```bash
     # if you have the alias set up
     dcf restart frontend
 
     # without aliases (not recommended)
     docker-compose -f docker-compose.yml -f docker-compose.local.yml -f docker-compose.ssl.yml -f docker-compose.frontend.yml restart frontend
-    ```
+```
 
-    If using without docker - stop the server, then start it again.
+If using without docker - stop the server, then start it again.
 
 ## Extending reducers & actions
 

@@ -19,10 +19,10 @@ class Sidebar extends Component {
   }
 
 
-  componentDidMount() {
-    if(sessionStorage.activeSections) {
+  getStoredActiveSections(storage) {
+    if(storage.activeSections) {
       this.setState({
-        activeSections: JSON.parse(sessionStorage.getItem('activeSections'))
+        activeSections: JSON.parse(storage.getItem('activeSections'))
       })
     }
     else{
@@ -30,6 +30,10 @@ class Sidebar extends Component {
       activeSections: this.props.sectionList.map(obj => obj["title"])
     });
   }
+}
+
+  componentDidMount() {
+    this.getStoredActiveSections(sessionStorage)
   }
 
 
@@ -45,10 +49,6 @@ class Sidebar extends Component {
       location,
       sectionList,
     } = this.props;
-    const { isSectionActive } = this.state;
-
-
-
 
 
     const SectionComponent = enableScrollSync ? ScrollSyncSection : Section;
@@ -88,7 +88,7 @@ class Sidebar extends Component {
   }
 
   _toggleSection = (title) => {
-    this.state.activeSections.includes(title) 
+    this.state.activeSections.includes(title)
       ? this.setState({
         activeSections: this.state.activeSections.filter(section => section !== title)
       })

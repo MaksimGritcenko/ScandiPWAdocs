@@ -161,7 +161,7 @@ class StickyResponsiveSidebar extends Component<Props, State> {
             borderRadius: '50%',
             border: '1px solid rgba(255, 255, 255, 0.1)',
             boxShadow: '0 0 20px rgba(0, 0, 0, 0.3)',
-            [media.lessThan('small')]: smallScreenBottomBarStyles,
+            [media.lessThan('medium')]: smallScreenBottomBarStyles,
             
           }}
           onClick={this._openNavMenu}
