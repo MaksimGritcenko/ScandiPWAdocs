@@ -141,16 +141,16 @@ const sharedStyles = {
         transform: 'translateX(60%)',
       },
       [media.greaterThan('xlarge')]: {
-        maxWidth: 800,
-        transform: 'translateX(65%)',
+        maxWidth: 900,
+        transform: 'translateX(40%)',
       },
       [media.greaterThan('xxlarge')]: {
-        maxWidth: 850,
-        transform: 'translateX(50%)',
+        maxWidth: 1000,
+        transform: 'translateX(30%)',
       },
       [media.greaterThan('xxxlarge')]: {
-        maxWidth: 1000,
-        transform: 'translateX(45%)',
+        maxWidth: 1300,
+        transform: 'translateX(25%)',
       },
       [media.greaterThan('sidebarFixed')]: {
         maxWidth: 1300,

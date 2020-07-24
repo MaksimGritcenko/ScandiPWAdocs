@@ -80,8 +80,8 @@ class StickyResponsiveSidebar extends Component<Props, State> {
               marginRight: -999,
               paddingRight: -999,
               backgroundColor: '#f7f7f7',
-              maxWidth: 600,
-              minWidth: 500
+              maxWidth: 460,
+              minWidth: 460
             },
 
             [media.between('medium', 'sidebarFixed', true)]: {
