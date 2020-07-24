@@ -5,7 +5,7 @@
     - id: mac
       title: MacOs Docker setup
     - id: with-remote-m2
-      title: Setting up ScandiPWA theme with a remote Magento instance
+      title: Remote Magento instance setup
     - id: update
       title: Upgrading to a new version
 - title: A to Z Overview
@@ -28,7 +28,7 @@
   # isOrdered: true
   items:
     - id: base-template
-      title: How to create a base template in ScandiPWA
+      title: How to create a base template
     - id: connecting-resolver
       title: How to connect to a GraphQL resolver
     - id: extension
@@ -38,21 +38,21 @@
     - id: debug-and-inspect
       title: How to Debug and Inspect a Theme
     - id: frontend-setup
-      title: How to Set Up ScandiPWA Frontend
+      title: How to Set Up Frontend
     - id: file-structure
       title: How to Work with a File Structure
     - id: data-flow
       title: How to work with Data Flow
     - id: technology-stack
-      title: How to Work with the ScandiPWA Technology Stack
+      title: How to Work with the Technology Stack
     - id: build-and-configuration
       title: How to Work With Theme Build and Configuration
     - id: caching
-      title: How to implement caching for new caching identities
+      title: How to Implement Caching for New Caching Identities
 - title: Tutorials - Intermediate
   items:
     - id: debug-in-chrome
-      title: How to Debug ScandiPWA in Chrome
+      title: How to Debug in Chrome
     - id: xdebug
       title: How to configure XDebug
     - id: cli
