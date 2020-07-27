@@ -61,7 +61,7 @@ class StickyResponsiveSidebar extends Component<Props, State> {
       display: 'inline-block',
     };
 
-    const iconOffset = open ? 8 : -4;
+    const iconOffset = 8;
     const menuOpacity = open ? 1 : 0;
     const menuOffset = open ? 0 : 40;
 
@@ -182,6 +182,7 @@ class StickyResponsiveSidebar extends Component<Props, State> {
                 flexDirection: 'row',
                 alignItems: 'center',
                 height: 60,
+                width: 20,
                 [media.between('medium', 'large')]: {
                   height: 50,
                 },
@@ -191,7 +192,18 @@ class StickyResponsiveSidebar extends Component<Props, State> {
                   alignItems: 'flex-start',
                 },
               }}>
-              <div
+                { !this.state.open
+                ? <div css={{
+                    fontSize: 35,
+                    position: 'absolute',
+                    left: 0,
+                    right: 0,
+                    top: '2%',
+                    left: '25%',
+                }}>
+                    ...
+                  </div>
+                : <div
                 css={{
                   width: 20,
                   height: 20,
@@ -219,6 +231,7 @@ class StickyResponsiveSidebar extends Component<Props, State> {
                   }}
                 />
               </div>
+                }
             </div>
           </Container>
         </div>
