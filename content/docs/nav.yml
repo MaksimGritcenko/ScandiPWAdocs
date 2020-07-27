@@ -1,13 +1,13 @@
-- title: How to start & upgrade
+- title: Start & Upgrade
   items:
     - id: linux
-      title: Linux Docker setup
+      title: Linux
     - id: mac
-      title: MacOs Docker setup
+      title: MacOs
     - id: with-remote-m2
-      title: Remote Magento instance setup
+      title: Remote Magento Instance 
     - id: update
-      title: Upgrading to a new version
+      title: Theme Upgrade
 - title: A to Z Overview
   items:
     - id: motivation
@@ -24,51 +24,51 @@
       title: Development
     - id: installing
       title: Installation
-- title: Tutorials - Introductory
+- title: How-To Tutorials - Introductory
   # isOrdered: true
   items:
     - id: base-template
-      title: How to create a base template
+      title: Base Template
     - id: connecting-resolver
-      title: How to connect to a GraphQL resolver
+      title: Connecting to a GraphQL Resolver
     - id: extension
-      title: How to customise and overwrite theme
+      title: Customizing and Overwriting
     - id: creating-resolver
-      title: How to create GraphQL resolver
+      title: Creating GraphQL resolver
     - id: debug-and-inspect
-      title: How to Debug and Inspect a Theme
+      title: Debugging and Inspecting
     - id: frontend-setup
-      title: How to Set Up Frontend
+      title: Setting Up Frontend
     - id: file-structure
-      title: How to Work with a File Structure
+      title: File Structure
     - id: data-flow
-      title: How to work with Data Flow
+      title: Data Flow
     - id: technology-stack
-      title: How to Work with the Technology Stack
+      title: Technology Stack
     - id: build-and-configuration
-      title: How to Work With Theme Build and Configuration
+      title: Theme Build and Configuration
     - id: caching
-      title: How to Implement Caching for New Caching Identities
-- title: Tutorials - Intermediate
+      title: Implementing Caching for New Caching Identities
+- title: How-To Tutorials - Intermediate
   items:
     - id: debug-in-chrome
-      title: How to Debug in Chrome
+      title: Debugging in Chrome
     - id: xdebug
-      title: How to configure XDebug
+      title: Configuring XDebug
     - id: cli
-      title: How to use CLI in Docker
+      title: CLI in Docker
     - id: postman-graphql-playground
-      title: How to Use Postman & GraphQL playground
+      title: Postman & GraphQL Playground
     - id: vsc-extensions
-      title: How to use VSCode Extensions
+      title: VSCode Extensions
     - id: eslint-stylelint
-      title: How to write better code using ESlint & StyleLint
+      title: ESlint & StyleLint
     - id: contribute
       title: How to Contribute
     - id: migrate-newer-version
-      title: How to Migrate to a Newer Version
+      title: Migrating to a Newer Version
     - id: on-existing-m2
-      title: How to Install Theme on Existing Magento 2 Server
+      title: Installation on Existing Magento 2 Server
     - id: coding-standard
       title: BEM and Coding Standards
     - id: react-best-practices
