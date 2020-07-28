@@ -52,8 +52,11 @@ module.exports = {
           {
             resolve: 'gatsby-remark-code-buttons',
             options: {
-              buttonContainerClass: `customButtonContainerClass`,
+              uttonContainerClass: `customButtonContainerClass`,
               buttonClass: `customButtonClass`,
+              toasterClass: `customToasterClass`,
+              toasterTextClass: `customToasterTextClass`,
+              toasterText: 'Copied',
             }
           },
           'gatsby-remark-responsive-iframe',
