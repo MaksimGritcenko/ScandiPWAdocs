@@ -22,8 +22,12 @@ class Section extends React.Component {
       onLinkClick,
       onSectionTitleClick,
       section,
+      activeSections,
+      title
     } = this.props;
     const uid = 'section_' + this.state.uid;
+
+
     return (
       <div>
         <button
@@ -35,13 +39,16 @@ class Section extends React.Component {
             border: 0,
             marginTop: 10,
           }}
-          onClick={onSectionTitleClick}>
+          onClick={() => onSectionTitleClick(title)}
+          >
           <MetaTitle
             cssProps={{
               [media.greaterThan('small')]: {
                 color: isActive ? colors.text : colors.subtle,
-                paddingRight: 7,
+                color: colors.subtle,
                 paddingLeft: 7,
+                paddingRight: 7,
+                marginLeft: -14,
                 ':hover': {
                   color: colors.text,
                 },
@@ -51,7 +58,7 @@ class Section extends React.Component {
             <ChevronSvg
               cssProps={{
                 marginLeft: 7,
-                transform: isActive ? 'rotateX(180deg)' : 'rotateX(0deg)',
+                // transform: activeSections.includes(title) ? 'rotateX(180deg)' : 'rotateX(0deg)',
                 transition: 'transform 0.2s ease',
 
                 [media.lessThan('small')]: {
@@ -67,8 +74,9 @@ class Section extends React.Component {
             fontFeatureSettings: "'tnum'",
             marginBottom: 10,
 
+
             [media.greaterThan('small')]: {
-              display: isActive ? 'block' : 'none',
+              display: activeSections.includes(title) ? 'block' : 'none',
             },
           }}>
           {section.items.map((item, index) => (

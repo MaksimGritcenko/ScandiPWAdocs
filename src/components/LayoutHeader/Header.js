@@ -17,7 +17,7 @@ import DocSearch from './DocSearch';
 // $FlowFixMe
 import navHeader from '../../../content/headerNav.yml';
 
-import logoSvg from 'icons/logo.svg';
+import logoSvg from 'icons/logo.png';
 
 const Header = ({location}: {location: Location}) => (
   <header
@@ -33,34 +33,6 @@ const Header = ({location}: {location: Location}) => (
         display: 'none',
       },
     }}>
-    <Container>
-      <div
-        css={{
-          height: 60,
-          fontSize: 20,
-          padding: 20,
-          textAlign: 'center',
-          [media.between('small', 'large')]: {
-            fontSize: 22,
-            height: 60,
-          },
-          [media.lessThan('small')]: {
-            height: 80,
-          },
-          [media.greaterThan('medium')]: {
-            fontSize: 25,
-          },
-        }}>
-        Black Lives Matter.{' '}
-        <a
-          style={{color: colors.brand}}
-          target="_blank"
-          rel="noopener"
-          href="https://support.eji.org/give/153413/#!/donation/checkout">
-          Support&nbsp;the&nbsp;Equal&nbsp;Justice&nbsp;Initiative.
-        </a>
-      </div>
-    </Container>
     <Container>
       <div
         css={{
@@ -95,33 +67,8 @@ const Header = ({location}: {location: Location}) => (
               flex: '0 0 auto',
             },
           }}
-          to="/">
-          <img src={logoSvg} alt="" height="20" />
-          <span
-            css={{
-              color: 'inherit',
-              marginLeft: 10,
-              fontWeight: 700,
-              fontSize: 20,
-              lineHeight: '20px',
-              [media.lessThan('large')]: {
-                fontSize: 16,
-                marginTop: 1,
-              },
-              [media.lessThan('small')]: {
-                // Visually hidden
-                position: 'absolute',
-                overflow: 'hidden',
-                clip: 'rect(0 0 0 0)',
-                height: 1,
-                width: 1,
-                margin: -1,
-                padding: 0,
-                border: 0,
-              },
-            }}>
-            React
-          </span>
+          to="/docs/linux.html">
+          <img src={logoSvg} alt="" width="150" />
         </Link>
 
         <nav

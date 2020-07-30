@@ -13,10 +13,32 @@ import {media} from 'theme';
 class Sidebar extends Component {
   constructor(props, context) {
     super(props, context);
-
     this.state = {
-      activeSection: props.defaultActiveSection,
+      activeSections: []
     };
+  }
+
+
+  getStoredActiveSections(storage) {
+    if(storage.activeSections) {
+      this.setState({
+        activeSections: JSON.parse(storage.getItem('activeSections'))
+      })
+    }
+    else{
+    this.setState({
+      activeSections: this.props.sectionList.map(obj => obj["title"])
+    });
+  }
+}
+
+  componentDidMount() {
+    this.getStoredActiveSections(sessionStorage)
+  }
+
+
+  componentWillUnmount() {
+    sessionStorage.setItem('activeSections', JSON.stringify(this.state.activeSections))
   }
 
   render() {
@@ -27,7 +49,7 @@ class Sidebar extends Component {
       location,
       sectionList,
     } = this.props;
-    const {activeSection} = this.state;
+
 
     const SectionComponent = enableScrollSync ? ScrollSyncSection : Section;
 
@@ -52,11 +74,12 @@ class Sidebar extends Component {
         {sectionList.map((section, index) => (
           <SectionComponent
             createLink={createLink}
-            isActive={activeSection === section || sectionList.length === 1}
+            activeSections={ this.state.activeSections }
+            title={section["title"]}
             key={index}
             location={location}
             onLinkClick={closeParentMenu}
-            onSectionTitleClick={() => this._toggleSection(section)}
+            onSectionTitleClick={this._toggleSection}
             section={section}
           />
         ))}
@@ -64,10 +87,15 @@ class Sidebar extends Component {
     );
   }
 
-  _toggleSection(section) {
-    this.setState(state => ({
-      activeSection: state.activeSection === section ? null : section,
-    }));
+  _toggleSection = (title) => {
+    this.state.activeSections.includes(title)
+      ? this.setState({
+        activeSections: this.state.activeSections.filter(section => section !== title)
+      })
+
+      : this.setState({
+        activeSections: [...this.state.activeSections, title]
+      })
   }
 }
 

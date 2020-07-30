@@ -10,6 +10,7 @@ import React, {Component} from 'react';
 import Sidebar from 'templates/components/Sidebar';
 import {colors, media} from 'theme';
 import ChevronSvg from 'templates/components/ChevronSvg';
+import './StickyResponsiveSidebar.css'
 
 type State = {
   open: boolean,
@@ -60,7 +61,7 @@ class StickyResponsiveSidebar extends Component<Props, State> {
       display: 'inline-block',
     };
 
-    const iconOffset = open ? 8 : -4;
+    const iconOffset = 8;
     const menuOpacity = open ? 1 : 0;
     const menuOffset = open ? 0 : 40;
 
@@ -147,6 +148,7 @@ class StickyResponsiveSidebar extends Component<Props, State> {
             cursor: 'pointer',
             position: 'fixed',
             right: 20,
+            width: 60,
             zIndex: 3,
             borderRadius: '50%',
             border: '1px solid rgba(255, 255, 255, 0.1)',
@@ -172,30 +174,42 @@ class StickyResponsiveSidebar extends Component<Props, State> {
                   alignItems: 'flex-start',
                 },
               }}>
-              <div
-                css={{
-                  width: 20,
-                  height: 20,
-                  alignSelf: 'center',
-                  display: 'flex',
-                  flexDirection: 'column',
-                  color: colors.brand,
-                }}>
-                <ChevronSvg
-                  size={15}
-                  cssProps={{
-                    transform: `translate(2px, ${iconOffset}px) rotate(180deg)`,
-                    transition: 'transform 0.2s ease',
-                  }}
-                />
-                <ChevronSvg
-                  size={15}
-                  cssProps={{
-                    transform: `translate(2px, ${0 - iconOffset}px)`,
-                    transition: 'transform 0.2s ease',
-                  }}
-                />
-              </div>
+                { !this.state.open 
+                ? <div 
+                // css={{width: 30,
+                //   height: 30,
+                //   border: '1px solid red'}}
+                className="BurgerButon">
+                    <div className="BurgerButton-Line"></div>
+                    <div className="BurgerButton-Line"></div>
+                    <div className="BurgerButton-Line"></div>
+                </div>
+                : <div
+                    css={{
+                      width: 20,
+                      height: 20,
+                      alignSelf: 'center',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      color: colors.brand,
+                    }}>
+                    <ChevronSvg
+                      size={15}
+                      cssProps={{
+                        transform: `translate(2px, ${iconOffset}px) rotate(180deg)`,
+                        transition: 'transform 0.2s ease',
+                      }}
+                    />
+                    <ChevronSvg
+                      size={15}
+                      cssProps={{
+                        transform: `translate(2px, ${0 - iconOffset}px)`,
+                        transition: 'transform 0.2s ease',
+                      }}
+                    />
+                  </div>
+                }
+             
             </div>
           </Container>
         </div>
