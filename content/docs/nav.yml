@@ -1,176 +1,80 @@
-- title: Installation
+- title: Start & Upgrade
   items:
-    - id: getting-started
-      title: Getting Started
-    - id: add-react-to-a-website
-      title: Add React to a Website
-    - id: create-a-new-react-app
-      title: Create a New React App
-    - id: cdn-links
-      title: CDN Links
-    - id: release-channels
-      title: Release Channels
-- title: Main Concepts
-  isOrdered: true
+    - id: linux
+      title: Linux
+    - id: mac
+      title: MacOs
+    - id: with-remote-m2
+      title: Remote Magento Instance 
+    - id: update
+      title: Theme Upgrade
+- title: A to Z Overview
   items:
-    - id: hello-world
-      title: Hello World
-    - id: introducing-jsx
-      title: Introducing JSX
-    - id: rendering-elements
-      title: Rendering Elements
-    - id: components-and-props
-      title: Components and Props
-    - id: state-and-lifecycle
-      title: State and Lifecycle
-    - id: handling-events
-      title: Handling Events
-    - id: conditional-rendering
-      title: Conditional Rendering
-    - id: lists-and-keys
-      title: Lists and Keys
-    - id: forms
-      title: Forms
-    - id: lifting-state-up
-      title: Lifting State Up
-    - id: composition-vs-inheritance
-      title: Composition vs Inheritance
-    - id: thinking-in-react
-      title: Thinking In React
-- title: Advanced Guides
-  items:
-    - id: accessibility
-      title: Accessibility
-    - id: code-splitting
-      title: Code-Splitting
-    - id: context
-      title: Context
-    - id: error-boundaries
-      title: Error Boundaries
-    - id: forwarding-refs
-      title: Forwarding Refs
-    - id: fragments
-      title: Fragments
-    - id: higher-order-components
-      title: Higher-Order Components
-    - id: integrating-with-other-libraries
-      title: Integrating with Other Libraries
-    - id: jsx-in-depth
-      title: JSX In Depth
-    - id: optimizing-performance
-      title: Optimizing Performance
-    - id: portals
-      title: Portals
-    - id: profiler
-      title: Profiler
-    - id: react-without-es6
-      title: React Without ES6
-    - id: react-without-jsx
-      title: React Without JSX
-    - id: reconciliation
-      title: Reconciliation
-    - id: refs-and-the-dom
-      title: Refs and the DOM
-    - id: render-props
-      title: Render Props
-    - id: static-type-checking
-      title: Static Type Checking
-    - id: strict-mode
-      title: Strict Mode
-    - id: typechecking-with-proptypes
-      title: Typechecking With PropTypes
-    - id: uncontrolled-components
-      title: Uncontrolled Components
-    - id: web-components
-      title: Web Components
-- title: API Reference
-  items:
-    - id: react-api
-      title: React
-      subitems:
-        - id: react-component
-          title: React.Component
-    - id: react-dom
-      title: ReactDOM
-    - id: react-dom-server
-      title: ReactDOMServer
-    - id: dom-elements
-      title: DOM Elements
-    - id: events
-      title: SyntheticEvent
-    - id: test-utils
-      title: Test Utilities
-    - id: test-renderer
-      title: Test Renderer
-    - id: javascript-environment-requirements
-      title: JS Environment Requirements
-    - id: glossary
-      title: Glossary
-- title: Hooks
-  isOrdered: true
-  items:
-    - id: hooks-intro
-      title: Introducing Hooks
-    - id: hooks-overview
-      title: Hooks at a Glance
-    - id: hooks-state
-      title: Using the State Hook
-    - id: hooks-effect
-      title: Using the Effect Hook
-    - id: hooks-rules
-      title: Rules of Hooks
-    - id: hooks-custom
-      title: Building Your Own Hooks
-    - id: hooks-reference
-      title: Hooks API Reference
-    - id: hooks-faq
-      title: Hooks FAQ
-- title: Testing
-  items:
-    - id: testing
-      title: Testing Overview
-    - id: testing-recipes
-      title: Testing Recipes
-    - id: testing-environments
-      title: Testing Environments
-- title: Concurrent Mode (Experimental)
-  isOrdered: true
-  items:
-    - id: concurrent-mode-intro
-      title: Introducing Concurrent Mode
-    - id: concurrent-mode-suspense
-      title: Suspense for Data Fetching
-    - id: concurrent-mode-patterns
-      title: Concurrent UI Patterns
-    - id: concurrent-mode-adoption
-      title: Adopting Concurrent Mode
-    - id: concurrent-mode-reference
-      title: Concurrent Mode API Reference
-- title: Contributing
-  items:
-    - id: how-to-contribute
-      title: How to Contribute
-    - id: codebase-overview
-      title: Codebase Overview
-    - id: implementation-notes
-      title: Implementation Notes
-    - id: design-principles
-      title: Design Principles
+    - id: motivation
+      title: Motivation
+    - id: challenges
+      title: Challenges
+    - id: file-structure-ui
+      title: File structure and UI components
+    - id: rewriting-extending
+      title: Rewriting and extending theme
 - title: FAQ
   items:
-    - id: faq-ajax
-      title: AJAX and APIs
-    - id: faq-build
-      title: Babel, JSX, and Build Steps
-    - id: faq-functions
-      title: Passing Functions to Components
-    - id: faq-state
-      title: Component State
-    - id: faq-styling
-      title: Styling and CSS
-    - id: faq-structure
+    - id: development
+      title: Development
+    - id: installing
+      title: Installation
+- title: How-To Tutorials - Introductory
+  # isOrdered: true
+  items:
+    - id: base-template
+      title: Base Template
+    - id: connecting-resolver
+      title: Connecting to a GraphQL Resolver
+    - id: extension
+      title: Customizing and Overwriting
+    - id: creating-resolver
+      title: Creating GraphQL resolver
+    - id: debug-and-inspect
+      title: Debugging and Inspecting
+    - id: frontend-setup
+      title: Setting Up Frontend
+    - id: file-structure
       title: File Structure
-    - id: faq-versioning
-      title: Versioning Policy
-    - id: faq-internals
-      title: Virtual DOM and Internals
+    - id: data-flow
+      title: Data Flow
+    - id: technology-stack
+      title: Technology Stack
+    - id: build-and-configuration
+      title: Theme Build and Configuration
+    - id: caching
+      title: Implementing Caching for New Caching Identities
+- title: How-To Tutorials - Intermediate
+  items:
+    - id: debug-in-chrome
+      title: Debugging in Chrome
+    - id: xdebug
+      title: Configuring XDebug
+    - id: cli
+      title: CLI in Docker
+    - id: postman-graphql-playground
+      title: Postman & GraphQL Playground
+    - id: vsc-extensions
+      title: VSCode Extensions
+    - id: eslint-stylelint
+      title: ESlint & StyleLint
+    - id: contribute
+      title: How to Contribute
+    - id: migrate-newer-version
+      title: Migrating to a Newer Version
+    - id: on-existing-m2
+      title: Installation on Existing Magento 2 Server
+    - id: coding-standard
+      title: BEM and Coding Standards
+    - id: react-best-practices
+      title: React Best Practices
+    - id: best-practices-styles
+      title: Best Practices Working with Styles
+
+
+
