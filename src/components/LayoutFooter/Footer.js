@@ -20,7 +20,9 @@ import navFooter from '../../../content/footerNav.yml';
 
 import ossLogoPng from 'images/oss_logo.png';
 
-const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => (
+const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => {
+  console.log(navFooter)
+  return (
   <footer
     css={{
       backgroundColor: colors.darker,
@@ -41,6 +43,8 @@ const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => (
           display: 'flex',
           flexDirection: 'row',
           flexWrap: 'wrap',
+          justifyContent: 'space-between',
+
 
           [media.between('small', 'medium')]: {
             paddingRight: layoutHasSidebar ? 240 : null,
@@ -65,11 +69,16 @@ const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => (
               width: 'calc(100% / 3 * 2)',
               paddingLeft: 40,
             },
+            [media.greaterThan('sidebarFixed')]: {
+              width: 'calc(100% / 5 * 2)',
+              paddingLeft: 40,
+            },
           }}>
-          <FooterNav layoutHasSidebar={layoutHasSidebar}>
+          {/* <FooterNav layoutHasSidebar={layoutHasSidebar}>
             <MetaTitle onDark={true}>{navFooter.docs.title}</MetaTitle>
             {sectionListDocs.map(section => {
               const defaultItem = section.items[0];
+              console.log(section)
               return (
                 <FooterLink
                   to={`/docs/${defaultItem.id}.html`}
@@ -83,6 +92,7 @@ const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => (
             <MetaTitle onDark={true}>{navFooter.channels.title}</MetaTitle>
             <SectionLinks links={navFooter.channels.items} />
           </FooterNav>
+
           <FooterNav layoutHasSidebar={layoutHasSidebar}>
             <MetaTitle onDark={true}>{navFooter.community.title}</MetaTitle>
             <ExternalFooterLink
@@ -96,8 +106,13 @@ const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => (
                 {section.title}
               </FooterLink>
             ))}
-          </FooterNav>
+          </FooterNav> */}
+
           <FooterNav layoutHasSidebar={layoutHasSidebar}>
+            <SectionLinks links={navFooter.privacy.items} />
+          </FooterNav>
+
+          {/* <FooterNav layoutHasSidebar={layoutHasSidebar}>
             <MetaTitle onDark={true}>{navFooter.more.title}</MetaTitle>
             <SectionLinks links={navFooter.more.items} />
             <ExternalFooterLink href="https://opensource.facebook.com/legal/privacy">
@@ -106,7 +121,7 @@ const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => (
             <ExternalFooterLink href="https://opensource.facebook.com/legal/terms">
               Terms
             </ExternalFooterLink>
-          </FooterNav>
+          </FooterNav> */}
         </div>
         <section
           css={{
@@ -151,6 +166,6 @@ const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => (
       </div>
     </Container>
   </footer>
-);
+)};
 
 export default Footer;

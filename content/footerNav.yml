@@ -41,3 +41,12 @@ channels:
     - title: Twitter
       to: https://twitter.com/reactjs
       external: true
+
+privacy:
+  items:
+    - title: Privacy Policy
+      to: https://scandipwa.com/privacy.html
+    - title: Cokie Policy
+      to: https://scandipwa.com/cookies.html
+    - title: Terms of Service
+      to: https://scandipwa.com/terms.html

@@ -20,9 +20,9 @@ const FooterNav = ({children, title, layoutHasSidebar = false}: Props) => (
   <div
     css={{
       display: 'flex',
-      flexDirection: 'column',
-      alignItems: 'flex-start',
-      width: '50%',
+      flexDirection: 'row',
+      alignItems: 'center',
+      // width: '100%',
       paddingTop: 40,
 
       [media.size('sidebarFixed')]: {
@@ -32,8 +32,11 @@ const FooterNav = ({children, title, layoutHasSidebar = false}: Props) => (
     }}>
     <div
       css={{
-        display: 'inline-flex',
-        flexDirection: 'column',
+        display: 'flex',
+        flexDirection: 'row',
+        [media.lessThan('medium')]: {
+          flexDirection: 'column',
+        },
       }}>
       {children}
     </div>

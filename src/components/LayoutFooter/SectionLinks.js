@@ -32,9 +32,9 @@ const SectionLinks = ({links}: Props) =>
     }
 
     return (
-      <FooterLink key={item.title} to={item.to}>
-        {item.title}
-      </FooterLink>
+        <FooterLink key={item.title} to={item.to}>
+          {item.title}
+        </FooterLink>
     );
   });
 
