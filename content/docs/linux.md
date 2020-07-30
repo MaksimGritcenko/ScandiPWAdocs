@@ -3,7 +3,19 @@
 layout: default
 keywords:
 comments: false
-
+redirect_from:
+  - "docs/"
+  - "docs/index.html"
+  - "docs/getting-started-ko-KR.html"
+  - "docs/getting-started-zh-CN.html"
+  - "docs/installation.html"
+  - "download.html"
+  - "downloads.html"
+  - "docs/try-react.html"
+  - "docs/tooling-integration.html"
+  - "docs/package-management.html"
+  - "docs/language-tooling.html"
+  - "docs/environments.html"
 # Hero section
 title: Linux Docker setup
 description: This guide is for setting up on Linux machines. This guide is meant for <b>local installation only</b>.

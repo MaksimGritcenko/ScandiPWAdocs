@@ -1,8 +1,4 @@
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * @emails react-core
- */
+
 
 'use strict';
 
