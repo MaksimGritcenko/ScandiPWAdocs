@@ -39,7 +39,7 @@ When writing step-by-step instructions (e.g. how to install something), try to f
 ## Guidelines for Code Examples
 
 ### Syntax
-
+  
 #### Prefer JSX to `createElement`.
 
 Ignore this if you're specifically describing `createElement`.
