@@ -49,17 +49,17 @@ const ErrorPage = ({data, location}: Props) => (
               minHeight: 'calc(100vh - 40px)',
             }}>
             <MarkdownHeader
-              path={data.markdownRemark.fields.path}
-              title={data.markdownRemark.frontmatter.title}
+              path={data.markdownRemark && data.markdownRemark.fields.path}
+              title={data.markdownRemark && data.markdownRemark.frontmatter.title}
             />
             <TitleAndMetaTags
-              title={`React - ${data.markdownRemark.frontmatter.title}`}
+              title={`React - ${data.markdownRemark && data.markdownRemark.frontmatter.title}`}
             />
 
             <div css={sharedStyles.articleLayout.content}>
               <div
                 css={sharedStyles.markdown}
-                dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}
+                dangerouslySetInnerHTML={{__html: data.markdownRemark && data.markdownRemark.html}}
               />
               <div
                 css={[
@@ -93,7 +93,7 @@ const ErrorPage = ({data, location}: Props) => (
               )}
               location={location}
               sectionList={sectionListDocs}
-              title={data.markdownRemark.frontmatter.title}
+              title={data.markdownRemark && data.markdownRemark.frontmatter.title}
             />
           </div>
         </div>
