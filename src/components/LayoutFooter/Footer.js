@@ -61,6 +61,7 @@ const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => {
           css={{
             flexWrap: 'wrap',
             display: 'flex',
+            justifyContent: 'flex-end',
 
             [media.lessThan('large')]: {
               width: '100%',

@@ -5,7 +5,7 @@
   position: relative;
   top: 63px;
   left: 5px;
-  z-index: 100;
+  z-index: 1;
   pointer-events: none; }
 
 .gatsby-code-button {
@@ -39,15 +39,15 @@
 
 .gatsby-code-button-toaster {
     display: none;
-  z-index: 500;
+  z-index: 1;
   position: fixed;
-  top: 0;
+  top: 80px;
   bottom: 0;
-  left: 0;
+  left: 20px;
   right: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   height: 100vh;
   width: 100vw;
   pointer-events: none; }
@@ -55,14 +55,14 @@
 .gatsby-code-button-toaster-text {
   width: 100%;
   margin: 0 15px;
-  max-width: 850px;
+  max-width: 150px;
   padding: 20px;
   font-size: 24px;
   letter-spacing: -1px;
   font-family: monospace;
-  color: #fff;
-  background-color: #000;
-  border-radius: 2px;
+  color: #000;
+  background-color: rgba(255, 255, 255, .9);
+  border-radius: 15px;
   text-align: center;
   opacity: 0;
   animation: animation 3s cubic-bezier(0.98, 0.01, 0.53, 0.47); }
@@ -71,7 +71,6 @@
   position: fixed;
   top: -9999px;
   opacity: 0; }
-  
 .gatsby-code-button-icon {
     display: none;
 }
