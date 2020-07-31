@@ -62,7 +62,9 @@ Following rules are true specifically in ScandiPWA project case:
 
 This projects uses [rebem-jsx-plugin](https://github.com/rebem/rebem-jsx) to implement BEM in this project.
 
-> **Note**: usage of `className` prop is prohibited.
+> **Note**:
+>
+> usage of `className` prop is prohibited.
 
 #### Defining a block
 
@@ -84,7 +86,9 @@ This projects uses [rebem-jsx-plugin](https://github.com/rebem/rebem-jsx) to imp
 
 #### Defining a block which is an element of parent block
 
-> **Note**: string props are declared with double quotes (`"`), while the object keys are declared with single quotes (`'`).
+> **Note**:
+>
+> string props are declared with double quotes (`"`), while the object keys are declared with single quotes (`'`).
 
 ```jsx
 <div block="Menu" mix={ { block: 'Header', elem: 'Menu' }}>
@@ -97,7 +101,9 @@ This projects uses [rebem-jsx-plugin](https://github.com/rebem/rebem-jsx) to imp
 
 - Boolean modifier
 
-> **Note**: the prop name should start with `is` to immediately represent boolean
+> **Note**:
+>
+> the prop name should start with `is` to immediately represent boolean
 
 ```jsx
 <div block="Menu" mods={ { isVisible: true } }>
@@ -147,7 +153,9 @@ Let's consider following JSX snippet:
 
 - How to access block's element:
 
-> **Note**: `&` stands for parent selector, it is very useful in order to not repeat yourself.
+> **Note**:
+>
+> `&` stands for parent selector, it is very useful in order to not repeat yourself.
 
 ```scss
 .Form {

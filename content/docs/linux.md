@@ -124,7 +124,10 @@ git clone git@github.com:scandipwa/scandipwa-base.git
 git clone https://github.com/scandipwa/scandipwa-base.git
 ```
 
-> **Note**: sometimes, after the repository is cloned, the git chooses the `master` branch as default. This is the legacy (incorrect) default branch in case of `scandipwa-base`. Please make sure you are using `2.x-stable`. You can do it using following command:
+>Note:
+>
+> sometimes, after the repository is cloned, the git chooses the `master` branch as default. This is the legacy (incorrect) default branch in case of `scandipwa-base`. Please make sure you are using `2.x-stable`. You can do it using following command:
+
 
 ```bash
 git status # expected output `On branch 2.x-stable`
@@ -150,7 +153,9 @@ make cert
 
 3. Pull all necessary container images
 
-    > **Note**: `container image` != `media image`. Read more about [container images here](https://docs.docker.com/v17.09/engine/userguide/storagedriver/imagesandcontainers/).
+    > Note:
+    >
+    > `container image` != `media image`. Read more about [container images here](https://docs.docker.com/v17.09/engine/userguide/storagedriver/imagesandcontainers/).
 
 ```bash
 # if you have the alias set up
@@ -164,7 +169,9 @@ docker-compose -f docker-compose.yml -f docker-compose.local.yml -f docker-compo
 
 There are two ways to use the setup: with `frontend` container and without it. The setup with `frontend` container is called **development**. The alias running it is `dcf`. The alias for **production**-like run is `dc`. If this is your first time setting up, run the (production-like) setup first (follow the step 4), otherwise the frontend container will not function properly.
 
-> **Note**: If you have already ran ScandiPWA in **production**-like mode once, you can safely skip to step 6. In case, of course, you plan on development.
+> **Note**: 
+>
+>If you have already ran ScandiPWA in **production**-like mode once, you can safely skip to step 6. In case, of course, you plan on development.
 
 ***
 
@@ -178,7 +185,9 @@ dc up -d --remove-orphans
 docker-compose -f docker-compose.yml -f docker-compose.local.yml -f docker-compose.ssl.yml up -d --remove-orphans
 ```
 
-> **Note**: the `--remove-orphans` flag is necessary to remove all left-over containers. In example, if you switched from **development** to **production** setup, the `frontend` container won't keep running.
+> **Note**:
+>
+> the `--remove-orphans` flag is necessary to remove all left-over containers. In example, if you switched from **development** to **production** setup, the `frontend` container won't keep running.
 
 5. Wait until the infrastructure starts
 
@@ -226,11 +235,15 @@ If you can see following output, the frontend is ready!
 ℹ ｢wdm｣: Compiled successfully
 ```
 
-> **Note**: the requests to `/graphql` will still fail, you need to wait until the `app` container starts. See instruction in step 5 to see how.
+> **Note**:
+>
+> the requests to `/graphql` will still fail, you need to wait until the `app` container starts. See instruction in step 5 to see how.
 
 ## How to access the site?
 
-> **Note**: all application configurations, i.e. admin password, admin username, admin URL, application mode and more is located in `.application` file.
+> **Note**:
+>
+> all application configurations, i.e. admin password, admin username, admin URL, application mode and more is located in `.application` file.
 
 1. To run any Magento-related command (`composer`, `bin/magento`) use `inapp bash` command on your host machine. Do not attempt to run them on your host machine.
 

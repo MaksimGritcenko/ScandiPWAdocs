@@ -27,7 +27,9 @@ page_nav:
 
 The theme is expected to be found in Magento's directory for themes: `app/design/frontend/<VENDOR>/<NAME>`. In docker, by default, the theme is located in `app/design/frontend/Scandiweb/pwa`.
 
-> **Note**: do not worry that you see no source files (.js, .scss) in your theme. This is expected. You are meant to create files in the same folder with the same name in order to modify them. See [extension](/docs/development/extension/) guide for that.
+> **Note**:
+>
+> do not worry that you see no source files (.js, .scss) in your theme. This is expected. You are meant to create files in the same folder with the same name in order to modify them. See [extension](/docs/development/extension/) guide for that.
 
 The source theme (composer installed) is located in `vendor/scandipwa/source`. Reference it for efficient development. But do not modify the vendor files! Use the [extension](/docs/development/extension/) mechanism for that.
 
@@ -41,7 +43,9 @@ The source theme (composer installed) is located in `vendor/scandipwa/source`. R
 
 Because the ScandiPWA is compiled to a valid Magento 2 theme, it must follow [Magento theme structure](https://devdocs.magento.com/guides/v2.3/frontend-dev-guide/themes/theme-structure.html).
 
-> **Note**: initially `Magento_Theme` folder is empty. You have to compile the application - see the [FAQ](/setup/docker/faq?id=luma-theme-is-displayed).
+> **Note**:
+>
+> initially `Magento_Theme` folder is empty. You have to compile the application - see the [FAQ](/setup/docker/faq?id=luma-theme-is-displayed).
 
 ```bash
 📦base-theme
@@ -140,7 +144,9 @@ Now, observe complete theme source-files related structure:
 
 ### Configuration & build files
 
-> **TODO**: add notes about webpack configuration naming, explain babel configuration
+> **TODO**:
+>
+> add notes about webpack configuration naming, explain babel configuration
 
 ```bash
 📦base-theme

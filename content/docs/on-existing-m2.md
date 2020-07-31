@@ -46,7 +46,9 @@ In Magento admin go to _Stores > Configuration > Advanced > System > Full Page C
 
 If it is not, please follow [official documentation](https://devdocs.magento.com/guides/v2.3/config-guide/varnish/config-varnish.html) to set it up.
 
-> **Note**: varnish is important! Please validate if it is installed with your hosting provider / developer.
+> **Note**:
+>
+> varnish is important! Please validate if it is installed with your hosting provider / developer.
 
 5. Make sure the `Redis` is installed on your host / infrastructure. To validate the installation run following:
 
@@ -56,7 +58,9 @@ redis-cli -v # should output 2.5^
 
 If it is not installed, please follow [this guide](https://codewithhugo.com/install-just-redis-cli-on-ubuntu-debian-jessie/) to obtain it.
 
-> **Note**: steps 5. and 6. are the requirements of `scandipwa/persisted-query` package.
+> **Note**:
+>
+> steps 5. and 6. are the requirements of `scandipwa/persisted-query` package.
 
 6. Important instance specific configurations:
 
@@ -105,13 +109,17 @@ Alternatively, set those configurations directly in `app/etc/env.php` under `cac
 
 3. Install the ScandiPWA theme:
 
-    > **Note**: by default for `<YOUR VENDOR>/<YOUR THEME>` we are using `Scandiweb/pwa`. But you can choose any other one.
+> **Note**:
+>
+> by default for `<YOUR VENDOR>/<YOUR THEME>` we are using `Scandiweb/pwa`. But you can choose any other one.
 
 ```bash
 php bin/magento scandipwa:theme:bootstrap <YOUR VENDOR>/<YOUR THEME>
 ```
 
-> **Note**: If the name is different from `Scandiweb/pwa`, edit the `<THEME ROOT>/src/config/webpack.production.config.js` configuration file. Specifically update the `publicPath` constant declaration to match `<YOUR VENDOR>/<YOUR THEME>`.
+> **Note**:
+>
+> If the name is different from `Scandiweb/pwa`, edit the `<THEME ROOT>/src/config/webpack.production.config.js` configuration file. Specifically update the `publicPath` constant declaration to match `<YOUR VENDOR>/<YOUR THEME>`.
 
 4. Go to the bootstrapped theme folder, and install the dependencies and compile a project:
 
@@ -143,13 +151,17 @@ Upon immediate inspection theme could appear fine, but might not load at all. Pl
 
 2. Homepage not showing - refer to the [FAQ](/docs/faq), search for `404 on Homepage`.
 
-> **Note**: after changing those configurations remember to flush the Magento caches.
+> **Note**:
+>
+> after changing those configurations remember to flush the Magento caches.
 
 For other issues, follow this simple algorithm:
 
 1. Refer to the [FAQ page](/docs/faq). It most probably already has the solution to your problem.
 
-    > **Note**: the Docker setup related issues are also mentioned in this document.
+> **Note**:
+>
+> the Docker setup related issues are also mentioned in this document.
 
 2. If the issue still persists, [join our community slack](https://join.slack.com/t/scandipwa/shared_invite/enQtNzE2Mjg1Nzg3MTg5LTQwM2E2NmQ0NmQ2MzliMjVjYjQ1MTFiYWU5ODAyYTYyMGQzNWM3MDhkYzkyZGMxYTJlZWI1N2ExY2Q1MDMwMTk), and feel free to ask questions in `#pwa_tech` public channel.
 

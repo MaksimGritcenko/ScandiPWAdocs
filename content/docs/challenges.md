@@ -21,7 +21,9 @@ page_nav:
         url: '/docs/overview'
 ---
 
-> **Note**: challenges described here are common to any SPA application. The ScandiPWA (and alternative solutions) way of solving those challenges is [described here](./existing_solutions.md).
+> **Note**:
+>
+> challenges described here are common to any SPA application. The ScandiPWA (and alternative solutions) way of solving those challenges is [described here](./existing_solutions.md).
 
 By design Magento front-end can not be separated from the Magneto back-end. This is because it is rendered on the server side, so you need a complete Magento instance to render the HTML for the browser (client).
 

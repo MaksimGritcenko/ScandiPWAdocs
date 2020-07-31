@@ -32,7 +32,9 @@ page_nav:
 </div>
 
 ## A step-by-step algorithm of creating a query
-> **TODO**: Complete the guide with references to helpers used in the video
+> **TODO**:
+>
+> Complete the guide with references to helpers used in the video
 
 ScandiPWA is provided with functionality that allows writing GraphQL queries quickly and easily. You will learn to implement a simple query.
 
@@ -65,7 +67,9 @@ type SentMessageInformation {
 2. In there create a class called `<FunctionalityPartName>Query`.
 
 3. Implement query retrieval functionality. Do not forget to add export to the `src/query/index.js` file.
->**Note: ScandiPWA provides `Field` class as a helper to write GraphQL queries. It is strongly recommended to stick to it as to the only possible way of query implementation**
+>**Note**:
+>
+> ScandiPWA provides `Field` class as a helper to write GraphQL queries. It is strongly recommended to stick to it as to the only possible way of query implementation
 
 
 ```javascript

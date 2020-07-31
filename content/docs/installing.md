@@ -59,7 +59,9 @@ On your **host** machine, execute following command:
 sudo sysctl -w vm.max_map_count=262144 # for too low `max_map_count`
 ```
 
-> **Note**, to set this values permanently, follow [this guide](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html#vm-max-map-count).
+> **Note**:
+>
+> to set this values permanently, follow [this guide](https://www.elastic.co/guide/en/elasticsearch/reference/current/vm-max-map-count.html#vm-max-map-count).
 
 After this, you can restart the `elasticsearch` container. To do it:
 
@@ -72,7 +74,9 @@ If for some reason issue persits, and the `elasticsearch` container keeps gettin
 To switch indexer, in Magento 2 admin, go to:
 _Stores > Configuration > Catalog > Catalog > Catalog Search > Search Engine_ and set to `MySQL`.
 
-> **Note**, after the next deploy, this value will be switched back to `elasticsearch` as this setting is set during the deploy.
+> **Note**:
+>
+> after the next deploy, this value will be switched back to `elasticsearch` as this setting is set during the deploy.
 
 ## The site does not open at all / loads forever
 
@@ -366,7 +370,9 @@ This could indicate to current Magento version not matching the the latest versi
 composer require scandipwa/installer ^1.0
 ```
 
-> **Note**: This will install older versions of ScandiPWA, and we suggest to upgrade Magento to 2.3.3 to make it possible to use latest ScandiPWA versions.
+> **Note**:
+>
+> This will install older versions of ScandiPWA, and we suggest to upgrade Magento to 2.3.3 to make it possible to use latest ScandiPWA versions.
 
 ## Content customization does not work
 
@@ -405,7 +411,9 @@ dc up -d --remove-orphans
 docker-compose -f docker-compose.yml -f docker-compose.local.yml -f docker-compose.ssl.yml up -d --remove-orphans
 ```
 
-> **Note**: the customization does not work in "development" mode - when the `frontend` container is running.
+> **Note**:
+>
+> the customization does not work in "development" mode - when the `frontend` container is running.
 
 ## Luma theme is displayed
 
@@ -437,7 +445,9 @@ If you see the blank screen and the browser console is showing an error:
 Uncaught SyntaxError: Invalid regular expression: missing /
 ```
 
-> **Note**: these steps require validation, please report in Slack what fixed that issue for you!
+> **Note**:
+>
+> these steps require validation, please report in Slack what fixed that issue for you!
 
 Validate tree, simple things:
 - You ran `npm ci` not `npm i`
@@ -492,6 +502,8 @@ dcf up -d --remove-orphans
 docker-compose -f docker-compose.yml -f docker-compose.local.yml -f docker-compose.ssl.yml -f docker-compose.frontend.yml up -d --remove-orphans
 ```
 
+>**Note**:
+>
 > Remember, initial project setup must happen in **production**-like mode. Only later (on next run) you can switch to **development**.
 
 ## ERROR: for <container> unauthorized ...
@@ -502,4 +514,6 @@ In case issue like this is displayed, you need to login into docker-hub. Then do
 
 Make sure that you follow the manual media installation instructions for your operating system - [MacOS](/docs/installation/docker/mac/) or [Linux](/docs/installation/docker/linux/).
 
-**Note**: Important that your media folder is path is `<PATH TO PROJECT ROOT>src/pub/media`. Such path is NOT correct `<PATH TO PROJECT ROOT>src/pub/media/media`.
+>**Note**:
+>
+> Important that your media folder is path is `<PATH TO PROJECT ROOT>src/pub/media`. Such path is NOT correct `<PATH TO PROJECT ROOT>src/pub/media/media`.

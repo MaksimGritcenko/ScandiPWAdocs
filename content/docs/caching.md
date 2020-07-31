@@ -26,7 +26,9 @@ ScandiPWA controls cache in a different way than [default Magento 2](https://dev
 
 ## Watch the tutorial
 
-> **Note**: video is coming soon!
+> **Note**:
+>
+> video is coming soon!
 
 ## General rule
 

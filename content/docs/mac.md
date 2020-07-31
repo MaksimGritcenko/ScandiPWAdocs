@@ -70,7 +70,9 @@ alias frontlogs="docker-compose -f docker-compose.yml -f docker-compose.local.ym
 
 Those aliases are required to have all services available at all times. Otherwise, if just using `docker-compose` only services defined in `docker-composer.yml` will be available. Understand what services are available at all by reading [this part of our documentation](https://docs.scandipwa.com/#/docker/03-services?id=list-of-available-services).
 
-> **Note**: Mutagen is necessary for Mac platform to improve performance. It is used to sync files between the host and docker container. There are some points you need to bear in mind while working with mutagen coming soon!
+> **Note**:
+>
+> Mutagen is necessary for Mac platform to improve performance. It is used to sync files between the host and docker container. There are some points you need to bear in mind while working with mutagen coming soon!
 
 5. Make sure you have a valid Magento 2 `COMPOSER_AUTH` set. This is an environment variable set on your host machine. To test if it is set, use:
 
@@ -114,7 +116,9 @@ git clone git@github.com:scandipwa/scandipwa-base.git
 git clone https://github.com/scandipwa/scandipwa-base.git
 ```
 
-> **Note**: sometimes, after the repository is cloned, the git chooses the `master` branch as default. This is the legacy (incorrect) default branch in case of `scandipwa-base`. Please make sure you are using `2.x-stable`. You can do it using following command:
+> **Note**:
+>
+> sometimes, after the repository is cloned, the git chooses the `master` branch as default. This is the legacy (incorrect) default branch in case of `scandipwa-base`. Please make sure you are using `2.x-stable`. You can do it using following command:
 
 ```bash
 git status # expected output `On branch 2.x-stable`
@@ -140,7 +144,9 @@ make cert
 
 3. Pull all necessary container images
 
-    > **Note**: `container image` != `media image`. Read more about [container images here](https://docs.docker.com/v17.09/engine/userguide/storagedriver/imagesandcontainers/).
+> **Note**:
+>
+> `container image` != `media image`. Read more about [container images here](https://docs.docker.com/v17.09/engine/userguide/storagedriver/imagesandcontainers/).
 
 ```bash
 # if you have the alias set up
@@ -154,7 +160,9 @@ docker-compose -f docker-compose.yml -f docker-compose.local.yml -f docker-compo
 
 There are two ways to use the setup: with `frontend` container and without it. The setup with `frontend` container is called **development**. The alias running it is `front`. The alias for **production**-like run is `localtheme`.
 
-> **Note**: If you have already ran ScandiPWA in any mode once, you can safely skip to step 3. In case, of course, you plan on development.
+> **Note**:
+>
+> If you have already ran ScandiPWA in any mode once, you can safely skip to step 3. In case, of course, you plan on development.
 
 ***
 
@@ -186,7 +194,9 @@ If you can see following output, the application is ready!
 NOTICE: ready to handle connections
 ```
 
-> **Note**: if you are starting the project with the frontend container, the ability of application to receive the requests does not mark that it is ready to be used. Frontend container compiles the theme asynchronously, so you need to read logs of the frontend container to understand when this process finishes. Instructions to that are described above.
+> **Note**:
+>
+> if you are starting the project with the frontend container, the ability of application to receive the requests does not mark that it is ready to be used. Frontend container compiles the theme asynchronously, so you need to read logs of the frontend container to understand when this process finishes. Instructions to that are described above.
 
 6. Start the development-setup (optional)
 
@@ -216,11 +226,15 @@ If you can see following output, the frontend is ready!
 ℹ ｢wdm｣: Compiled successfully
 ```
 
-> **Note**: the requests to `/graphql` will still fail, you need to wait until the `app` container starts. See instruction in step 2 to see how.
+> **Note**:
+>
+> the requests to `/graphql` will still fail, you need to wait until the `app` container starts. See instruction in step 2 to see how.
 
 ## How to access the site?
 
-> **Note**: all application configurations, i.e. admin password, admin username, admin URL, application mode and more is located in `.application` file.
+> **Note**:
+>
+> all application configurations, i.e. admin password, admin username, admin URL, application mode and more is located in `.application` file.
 
 1. To run any Magento-related command (`composer`, `bin/magento`) use `inapp bash` command on your host machine. Do not attempt to run them on your host machine.
 

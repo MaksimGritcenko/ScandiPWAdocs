@@ -112,7 +112,9 @@ Following parts (after the **NOTE #1**), are only involved if the global state u
 
 ## What is going on?
 
-> **Note**: the passthrough to the Redux is not obligatory, I would say it is an anti-pattern. You must only involve the Redux (global state), if more than one or two components in completely different places of application must know about that. The best examples are: `cart`, `account`. ScandiPWA has some redundant states in it. Their amount will be reduced in the future.
+> **Note**:
+>
+> the passthrough to the Redux is not obligatory, I would say it is an anti-pattern. You must only involve the Redux (global state), if more than one or two components in completely different places of application must know about that. The best examples are: `cart`, `account`. ScandiPWA has some redundant states in it. Their amount will be reduced in the future.
 
 1.  User input (`User -> A`)
 2.  Global state changing user interaction (`A -> B`)

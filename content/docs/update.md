@@ -16,7 +16,9 @@ micro_nav:
 
 ---
 
-> **Note**: Some changes are not backwards-compatible, if you update to the latest version and you have customisations depending on an old version, they might stop working properly. Fixing this usually does not take a lot of time, nevertheless bear that in mind when updating.
+> **Note**:
+>
+> Some changes are not backwards-compatible, if you update to the latest version and you have customisations depending on an old version, they might stop working properly. Fixing this usually does not take a lot of time, nevertheless bear that in mind when updating.
 
 ## Getting the latest minor release
 
@@ -37,7 +39,9 @@ composer update scandipwa/*
 
 1. Update the `scandipwa/installer` dependency in your `src/composer.json`.
 
-    > **Note**: Remember about the `minimum-stability` setting, if you wish to install a pre-release version.
+> **Note**:
+>
+> Remember about the `minimum-stability` setting, if you wish to install a pre-release version.
 
 2. Launch the project and run the following command
 
