@@ -82,6 +82,11 @@ class StickyResponsiveSidebar extends Component<Props, State> {
               backgroundColor: '#f7f7f7',
             },
 
+            [media.greaterThan('sidebarFixed')]: {
+              marginRight: -999,
+              paddingRight: 999,
+            },
+
             [media.between('medium', 'sidebarFixed', true)]: {
               position: 'fixed',
               zIndex: 2,

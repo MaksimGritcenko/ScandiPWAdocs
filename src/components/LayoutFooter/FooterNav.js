@@ -27,7 +27,7 @@ const FooterNav = ({children, title, layoutHasSidebar = false}: Props) => (
 
       [media.size('sidebarFixed')]: {
         paddingTop: 0,
-        width: '25%',
+        // width: '25%',
       },
     }}>
     <div

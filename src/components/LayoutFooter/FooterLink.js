@@ -7,7 +7,7 @@
 
 import {Link} from 'gatsby';
 import React from 'react';
-import {colors} from 'theme';
+import {colors, media} from 'theme';
 
 import type {Node} from 'react';
 
@@ -23,6 +23,9 @@ const FooterLink = ({children, target, to}: Props) => (
       lineHeight: 2,
       marginRight: 20,
       transition: 'color .1s ease',
+      [media.lessThan('large')]: {
+        marginBottom: '20px',
+      },
       ':hover': {
         color: colors.brand,
       },
