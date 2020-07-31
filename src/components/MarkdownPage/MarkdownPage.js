@@ -87,6 +87,7 @@ const MarkdownPage = ({
                 <div
                   css={{
                     marginTop: 15,
+                    marginBottom: 10,
                   }}>
                   {date}{' '}
                   {hasAuthors && (
@@ -111,7 +112,7 @@ const MarkdownPage = ({
                   dangerouslySetInnerHTML={{__html: markdownRemark.html}}
                 />
 
-                {markdownRemark.fields.path && (
+                {/* {markdownRemark.fields.path && (
                   <div css={{marginTop: 80}}>
                     <a
                       css={sharedStyles.articleLayout.editLink}
@@ -119,7 +120,7 @@ const MarkdownPage = ({
                       Edit this page
                     </a>
                   </div>
-                )}
+                )} */}
               </div>
             </Flex>
 

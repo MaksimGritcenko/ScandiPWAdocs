@@ -224,9 +224,12 @@ const sharedStyles = {
       fontSize: 17,
       lineHeight: 1.7,
       maxWidth: '42em',
+      marginBottom: 10,
+
 
       '&:first-of-type': {
         marginTop: 15,
+
       },
 
       '&:first-child': {

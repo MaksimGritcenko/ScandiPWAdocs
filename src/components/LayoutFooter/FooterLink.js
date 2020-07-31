@@ -21,7 +21,8 @@ const FooterLink = ({children, target, to}: Props) => (
   <Link
     css={{
       lineHeight: 2,
-      width: 150,
+      marginRight: 20,
+      transition: 'color .1s ease',
       ':hover': {
         color: colors.brand,
       },

@@ -144,7 +144,7 @@ const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => {
             },
           }}>
           <a
-            href="https://https://scandipwa.com/"
+            href="https://scandipwa.com/"
             target="_blank"
             rel="noopener">
             {/* <img
