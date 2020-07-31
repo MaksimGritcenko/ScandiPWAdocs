@@ -111,7 +111,6 @@ const linkStyle = {
   color: colors.text,
   whiteSpace: 'pre-wrap',
   wordBreak: 'break-word',
-
   ':hover': {
     backgroundColor: colors.brandLight,
     borderBottomColor: colors.text,

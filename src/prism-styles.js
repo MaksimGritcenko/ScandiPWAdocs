@@ -44,10 +44,14 @@ css.global(
     margin: '1rem',
     fontSize: 14,
     lineHeight: '20px',
+    maxWidth: 300,
     // whiteSpace: 'pre-wrap',
-    wordBreak: 'break-word',
+    // wordBreak: 'break-word',
   },
 );
+
+
+
 
 css.global('.gatsby-highlight + .gatsby-highlight', {
   marginTop: 20,
