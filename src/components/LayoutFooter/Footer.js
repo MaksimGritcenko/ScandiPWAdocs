@@ -156,7 +156,7 @@ const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => {
               }}
               src={ossLogoPng}
             /> */}
-             <svg xmlns="http://www.w3.org/2000/svg" width="206" height="50" viewBox="0 0 206 50">
+             <svg xmlns="http://www.w3.org/2000/svg" width="180" height="50" viewBox="0 0 206 50">
                 <g fill="none" fillRule="evenodd"><text fill="#bbb" fontFamily="Montserrat-SemiBold, Montserrat" fontSize="12"
                 fontWeight="500" letterSpacing="-.1">
                 <tspan x="0" y="47">The first PWA theme for Magento</tspan>
