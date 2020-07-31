@@ -43,6 +43,8 @@ css.global(
     height: 'auto !important',
     margin: '1rem',
     fontSize: 14,
+    paddingTop: 20,
+    paddingBottom: 18,
     lineHeight: '20px',
     maxWidth: 300,
     // whiteSpace: 'pre-wrap',
