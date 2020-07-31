@@ -109,6 +109,8 @@ const linkStyle = {
   backgroundColor: hex2rgba(colors.brandLight, 0.3),
   borderBottom: `1px solid ${hex2rgba(colors.black, 0.2)}`,
   color: colors.text,
+  whiteSpace: 'pre-wrap',
+  wordBreak: 'break-word',
 
   ':hover': {
     backgroundColor: colors.brandLight,

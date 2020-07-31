@@ -44,7 +44,7 @@ css.global(
     margin: '1rem',
     fontSize: 14,
     lineHeight: '20px',
-    whiteSpace: 'pre-wrap',
+    // whiteSpace: 'pre-wrap',
     wordBreak: 'break-word',
   },
 );

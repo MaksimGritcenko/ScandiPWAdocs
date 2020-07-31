@@ -180,7 +180,7 @@ class CodeEditor extends Component {
               </div>
               <pre
                 css={{
-                  whiteSpace: 'pre-wrap',
+                  // whiteSpace: 'pre-wrap',
                   wordBreak: 'break-word',
                   color: colors.error,
                   padding: 10,
