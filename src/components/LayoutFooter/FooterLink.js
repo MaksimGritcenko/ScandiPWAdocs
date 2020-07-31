@@ -24,7 +24,8 @@ const FooterLink = ({children, target, to}: Props) => (
       marginRight: 20,
       transition: 'color .1s ease',
       [media.lessThan('large')]: {
-        marginBottom: '20px',
+        marginBottom: 10,
+        marginRight: 0,
       },
       ':hover': {
         color: colors.brand,

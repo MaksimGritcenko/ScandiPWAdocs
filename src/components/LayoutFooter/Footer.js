@@ -65,7 +65,7 @@ const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => {
 
             [media.lessThan('large')]: {
               width: '100%',
-              justifyContent: 'center',
+              justifyContent: 'flex-start',
             },
             [media.greaterThan('xlarge')]: {
               width: 'calc(100% / 3 * 2)',
@@ -139,7 +139,7 @@ const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => {
               width: layoutHasSidebar ? null : 'calc(100% / 3)',
             },
             [media.lessThan('large')]: {
-              textAlign: 'center',
+              textAlign: 'start',
               width: '100%',
               paddingTop: 40,
             },
