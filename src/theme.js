@@ -308,7 +308,7 @@ const sharedStyles = {
         fontSize: 20,
       },
       [media.greaterThan('xlarge')]: {
-        fontSize: 35,
+        fontSize: 30,
       },
     },
 
