@@ -48,6 +48,17 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          {
+            resolve: 'gatsby-remark-code-buttons',
+          options: {
+            buttonClass: `customButtonClass`,
+            buttonText: `Copy`,
+            toasterClass: `customToasterClass`,
+            toasterTextClass: `customToasterTextClass`,
+            toasterText: 'Copied',
+            svgIcon: ``,
+          }
+          },
           'gatsby-remark-responsive-iframe',
           {
             resolve: 'gatsby-remark-images',

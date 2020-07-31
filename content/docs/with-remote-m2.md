@@ -54,7 +54,7 @@ git clone git@github.com:<YOUR GITHUB USERNAME>/scandipwa-base.git
 3. Make sure you have an nginx installed locally. To test this, run:
 
 ```bash
-    nginx -t # it should be ^1
+nginx -t # it should be ^1
 ```
 
 In case this command resulted in error, install the nginx [on Mac](https://medium.com/@ThomasTan/installing-nginx-in-mac-os-x-maverick-with-homebrew-d8867b7e8a5a) or [on Linux](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-18-04)
@@ -62,7 +62,7 @@ In case this command resulted in error, install the nginx [on Mac](https://mediu
 4. Make sure you have `node` available on you machine. To test this, run:
 
 ```bash
-    node -v # should be 10^
+node -v # should be 10^
 ```
 
 In case this command resulted in error, install node using the [official guide](https://nodejs.org/en/download/package-manager/). Prefer `nvm` installation to get NODE version 10 specifically.
@@ -70,7 +70,7 @@ In case this command resulted in error, install node using the [official guide](
 5. Execute following command to add `scandipwa.local` to your `/etc/hosts` file and map it to the `127.0.0.1`:
 
 ```bash
-    echo '127.0.0.1 scandipwa.local' | sudo tee -a /etc/hosts
+echo '127.0.0.1 scandipwa.local' | sudo tee -a /etc/hosts
 ```
 
 ## It is time to configure nginx!
@@ -80,78 +80,78 @@ Add nginx configuration file.
 1. To do this, first check the location of nginx configuration file:
 
 ```bash
-    nginx -t
+nginx -t
 
-    # expected output (on Mac)
-    nginx: the configuration file /usr/local/etc/nginx/nginx.conf syntax is ok
-    nginx: configuration file /usr/local/etc/nginx/nginx.conf test is successful
+# expected output (on Mac)
+nginx: the configuration file /usr/local/etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /usr/local/etc/nginx/nginx.conf test is successful
 ```
 
 2. Now, find the directory where nginx configurations are stored:
 
 ```bash
-    cat /usr/local/etc/nginx/nginx.conf | grep include
+cat /usr/local/etc/nginx/nginx.conf | grep include
 
-    # expected output (on Mac)
-    include       mime.types;
-    include servers/*; # <- you need this one
+# expected output (on Mac)
+include       mime.types;
+include servers/*; # <- you need this one
 ```
 
 3. Create new file there, using following command:
 
 ```bash
-    touch servers/scandipwa-remote.conf
+touch servers/scandipwa-remote.conf
 ```
 
 4. Open this file using your favorite editor and past following content inside (do not forget to replace the placeholders!):
 
 ```nginx
-    server {
-        listen 80;
-        server_name _;
-        resolver 127.0.0.11;
+server {
+    listen 80;
+    server_name _;
+    resolver 127.0.0.11;
 
-        # Route all traffic to app
-        location / {
-            proxy_pass http://localhost:3003;
-            proxy_http_version 1.1;
-            proxy_set_header Upgrade $http_upgrade;
-            proxy_set_header Connection "upgrade";
-            proxy_set_header Host             $http_host;
-            proxy_set_header X-Real-IP        $remote_addr;
-            proxy_set_header X-Forwarded-For  $proxy_add_x_forwarded_for;
-            proxy_redirect off;
-            proxy_read_timeout 600s;
-        }
-
-        location ~* /graphql {
-            proxy_pass http://<REMOTE SERVERDOMAIN>:80;
-            proxy_set_header Host             <REMOTE SERVER DOMAIN>;
-            proxy_set_header X-Real-IP        $remote_addr;
-            proxy_set_header X-Forwarded-For  $proxy_add_x_forwarded_for;
-            proxy_redirect off;
-            proxy_read_timeout 600s;
-        }
-
-        location ~* /(static|media|admin) {
-            proxy_pass http://<REMOTE SERVERDOMAIN>:80;
-            proxy_set_header Host             <REMOTE SERVER DOMAIN>;
-            proxy_set_header X-Real-IP        $remote_addr;
-            proxy_set_header X-Forwarded-For  $proxy_add_x_forwarded_for;
-            proxy_redirect off;
-            proxy_read_timeout 600s;
-        }
+    # Route all traffic to app
+    location / {
+        proxy_pass http://localhost:3003;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header Host             $http_host;
+        proxy_set_header X-Real-IP        $remote_addr;
+        proxy_set_header X-Forwarded-For  $proxy_add_x_forwarded_for;
+        proxy_redirect off;
+        proxy_read_timeout 600s;
     }
+
+    location ~* /graphql {
+        proxy_pass http://<REMOTE SERVERDOMAIN>:80;
+        proxy_set_header Host             <REMOTE SERVER DOMAIN>;
+        proxy_set_header X-Real-IP        $remote_addr;
+        proxy_set_header X-Forwarded-For  $proxy_add_x_forwarded_for;
+        proxy_redirect off;
+        proxy_read_timeout 600s;
+    }
+
+    location ~* /(static|media|admin) {
+        proxy_pass http://<REMOTE SERVERDOMAIN>:80;
+        proxy_set_header Host             <REMOTE SERVER DOMAIN>;
+        proxy_set_header X-Real-IP        $remote_addr;
+        proxy_set_header X-Forwarded-For  $proxy_add_x_forwarded_for;
+        proxy_redirect off;
+        proxy_read_timeout 600s;
+    }
+}
 ```
 
 5. Test and reload the `nginx` service:
 
 ```bash
-    # to test the configuration
-    nginx -t
+# to test the configuration
+nginx -t
 
-    # reload the configuration
-    nginx -s reload
+# reload the configuration
+nginx -s reload
 ```
 
 ## Time to decide - core or custom?
@@ -163,26 +163,26 @@ The theme can be developed in two modes - as contribution into core theme, or as
 1. Get the copy of `base-theme` - clone your fork, or clone the original repository.
 
 ```bash
-    # to clone the fork
-    git clone git@github.com:<YOUR GITHUB USERNAME>/base-theme.git
+# to clone the fork
+git clone git@github.com:<YOUR GITHUB USERNAME>/base-theme.git
 
-    # to clone the original repository
-    git clone git@github.com:scandipwa/base-theme.git
+# to clone the original repository
+git clone git@github.com:scandipwa/base-theme.git
 
-    # to clone via HTTPS (not recommended)
-    git clone https://github.com/scandipwa/base-theme.git
+# to clone via HTTPS (not recommended)
+git clone https://github.com/scandipwa/base-theme.git
 ```
 
 > **Note**: sometimes, after the repository is cloned, the git chooses the `master` branch as default. This is the legacy (incorrect) default branch in case of `base-theme`. Please make sure you are using `2.x-stable`. You can do it using following command:
 
 ```bash
-    git status # expected output `On branch 2.x-stable`
+git status # expected output `On branch 2.x-stable`
 ```
 
 If any other output has been returned, execute the following command to checkout the correct branch:
 
 ```bash
-    git checkout 2.x-stable
+git checkout 2.x-stable
 ```
 
 Later, for development purposes any new branch created from `2.x-stable` can be used.
@@ -190,8 +190,8 @@ Later, for development purposes any new branch created from `2.x-stable` can be 
 2. From the cloned theme folder, execute following:
 
 ```bash
-    npm ci # install dependencies
-    npm run watch-core
+npm ci # install dependencies
+npm run watch-core
 ```
 
 ### For custom theme development
@@ -203,13 +203,13 @@ Later, for development purposes any new branch created from `2.x-stable` can be 
 2. Inside, clone your custom theme repository:
 
 ```bash
-    git clone <CUSTOM THEME REPOSITORY GIT REMOTE>
+git clone <CUSTOM THEME REPOSITORY GIT REMOTE>
 ```
 
 3. Then, get matching `scandipwa/source` package version from [GitHub](https://github.com/scandipwa/base-theme) and clone it.
 
 ```bash
-    git clone git@github.com:scandipwa/base-theme.git
+git clone git@github.com:scandipwa/base-theme.git
 ```
 
 4. Validate the folder structure:
@@ -229,14 +229,14 @@ ls
     2. Open it with you favorite editor, and edit following lines:
 
 ```js
-    // original file content
-    const projectRoot = path.resolve(__dirname, '..', '..');
-    const magentoRoot = path.resolve(projectRoot, '..', '..', '..', '..', '..');
-    const fallbackRoot = path.resolve(magentoRoot, 'vendor', 'scandipwa', 'source');
+// original file content
+const projectRoot = path.resolve(__dirname, '..', '..');
+const magentoRoot = path.resolve(projectRoot, '..', '..', '..', '..', '..');
+const fallbackRoot = path.resolve(magentoRoot, 'vendor', 'scandipwa', 'source');
 
-    // resulting config
-    const projectRoot = path.resolve(__dirname, '..', '..');
-    const fallbackRoot = path.resolve(projectRoot, '..', 'base-theme');
+// resulting config
+const projectRoot = path.resolve(__dirname, '..', '..');
+const fallbackRoot = path.resolve(projectRoot, '..', 'base-theme');
 ```
 
 > **Note:** what you did is made the webpack to fallback to the cloned `base-theme` folder, instead of usual vendor file.
@@ -244,8 +244,8 @@ ls
 6. From the custom theme theme folder, execute following:
 
 ```bash
-    npm ci # install dependencies
-    npm run watch
+npm ci # install dependencies
+npm run watch
 ```
 
 ## Time to open the site

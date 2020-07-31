@@ -35,89 +35,89 @@ To make some of your model work as cache identity manager:
 1. Make sure it implements the `Magento\Framework\DataObject\IdentityInterface`
 
 ```php
-    use Magento\Framework\DataObject\IdentityInterface;
-    use Magento\Framework\Model\AbstractModel;
+use Magento\Framework\DataObject\IdentityInterface;
+use Magento\Framework\Model\AbstractModel;
 
-    class Slide extends AbstractModel implements IdentityInterface {
-        public function getIdentities() {
-            // TODO: implement
-        }
+class Slide extends AbstractModel implements IdentityInterface {
+    public function getIdentities() {
+        // TODO: implement
     }
+}
 ```
 
 2. Specify the caching tag constant, it should be short and unique:
 
 ```php
-    class Slide extends AbstractModel implements IdentityInterface {
-        const CACHE_TAG = 'sw_sld';
+class Slide extends AbstractModel implements IdentityInterface {
+    const CACHE_TAG = 'sw_sld';
 
-        protected $_cacheTag = self::CACHE_TAG;
-    }
+    protected $_cacheTag = self::CACHE_TAG;
+}
 ```
 
 3. Implement the `getIdentities` method, specify all involved cache identities. In our example, on slide save, the slider model should also be invalidate:
 
 ```php
-    class Slide extends AbstractModel implements IdentityInterface {
-        const CACHE_TAG = 'sw_sld';
+class Slide extends AbstractModel implements IdentityInterface {
+    const CACHE_TAG = 'sw_sld';
 
-        public function getIdentities() {
-            return [
-                self::CACHE_TAG . '_' . $this->getId(),
-                Slider::CACHE_TAG . '_' . $this->getSliderId()
-            ];
-        }
+    public function getIdentities() {
+        return [
+            self::CACHE_TAG . '_' . $this->getId(),
+            Slider::CACHE_TAG . '_' . $this->getSliderId()
+        ];
     }
+}
 ```
 
 4. Add the names for events, prefer unique, descriptive names:
 
 ```php
-    class Slide extends AbstractModel implements IdentityInterface {
-        protected $_eventPrefix = 'scandiweb_slider_slide';
-    }
+class Slide extends AbstractModel implements IdentityInterface {
+    protected $_eventPrefix = 'scandiweb_slider_slide';
+}
 ```
 
 5. In case you have a resource model, i.e. the `Collection`, add the event after collection save:
 
 ```php
-    use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
+use Magento\Framework\Model\ResourceModel\Db\Collection\AbstractCollection;
 
-    class Collection extends AbstractCollection {
-        protected function _afterLoadData() {
-            parent::_afterLoadData();
+class Collection extends AbstractCollection {
+    protected function _afterLoadData() {
+        parent::_afterLoadData();
 
-            $collection = clone $this;
+        $collection = clone $this;
 
-            if (count($collection)) {
-                $this->_eventManager->dispatch(
-                    'scandiweb_slider_slider_collection_load_after',
-                    ['collection' => $collection]
-                );
-            }
-
-            return $this;
+        if (count($collection)) {
+            $this->_eventManager->dispatch(
+                'scandiweb_slider_slider_collection_load_after',
+                ['collection' => $collection]
+            );
         }
+
+        return $this;
     }
+}
 ```
 
 6. It is finally time to connect the events, to granular cache management classes. Create, or modify the `etc/events.xml` with following content:
 
 ```xml
-    <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
-        <event name="scandiweb_slider_slider_collection_load_after">
-            <observer name="pq_cc_slider" instance="ScandiPWA\Cache\Observer\Response\TagEntityResponse"/>
-        </event>
-        <event name="scandiweb_slider_slider_save_after">
-            <observer name="pq_cc_slider" instance="ScandiPWA\Cache\Observer\FlushVarnishObserver"/>
-        </event>
-        <event name="scandiweb_slider_slide_collection_load_after">
-            <observer name="pq_cc_slide" instance="ScandiPWA\Cache\Observer\Response\TagEntityResponse"/>
-        </event>
-        <event name="scandiweb_slider_slide_save_after">
-            <observer name="pq_cc_slide" instance="ScandiPWA\Cache\Observer\FlushVarnishObserver"/>
-        </event>
-    </config>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="scandiweb_slider_slider_collection_load_after">
+        <observer name="pq_cc_slider" instance="ScandiPWA\Cache\Observer\Response\TagEntityResponse"/>
+    </event>
+    <event name="scandiweb_slider_slider_save_after">
+        <observer name="pq_cc_slider" instance="ScandiPWA\Cache\Observer\FlushVarnishObserver"/>
+    </event>
+    <event name="scandiweb_slider_slide_collection_load_after">
+        <observer name="pq_cc_slide" instance="ScandiPWA\Cache\Observer\Response\TagEntityResponse"/>
+    </event>
+    <event name="scandiweb_slider_slide_save_after">
+        <observer name="pq_cc_slide" instance="ScandiPWA\Cache\Observer\FlushVarnishObserver"/>
+    </event>
+</config>
 ```
 
 Note, there are two classes used as observers:

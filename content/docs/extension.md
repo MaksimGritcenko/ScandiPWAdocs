@@ -66,15 +66,15 @@ You create a file with the same name, under the same folder - reference the `ven
 4. The file is created, what next? Time to write some JavaScript. The main idea for extension - you are replacing the file, so all exposed "API"s especially `export` must be preserved. The general template looks as follows:
 
 ```javascript
-    import { /** Exports I plan to modify or reuse */ } from '<PATH TO SOURCE COMPONENT>';
+import { /** Exports I plan to modify or reuse */ } from '<PATH TO SOURCE COMPONENT>';
 
-    // TODO: implement the modifications to imported parts
+// TODO: implement the modifications to imported parts
 
-    export { /** Export all unmodified exports */ } from '<PATH TO SOURCE COMPONENT>';
+export { /** Export all unmodified exports */ } from '<PATH TO SOURCE COMPONENT>';
 
-    export { /** Exports I have overridden */ };
+export { /** Exports I have overridden */ };
 
-    export default /** copy the original default export */;
+export default /** copy the original default export */;
 ```
 
 Following notes apply:
@@ -227,25 +227,25 @@ For styles nothing changes. You create a file under the same name and it gets in
 1. Create the file importing original styles, like this:
 
 ```scss
-    // In case you made no changes
-    @import '../../../../../../../../../vendor/scandipwa/source/src/app/style/abstract/variables';
-    @import '../../../../../../../../../vendor/scandipwa/source/src/app/style/abstract/media';
-    @import '../../../../../../../../../vendor/scandipwa/source/src/app/style/abstract/button';
-    @import '../../../../../../../../../vendor/scandipwa/source/src/app/style/abstract/loader';
+// In case you made no changes
+@import '../../../../../../../../../vendor/scandipwa/source/src/app/style/abstract/variables';
+@import '../../../../../../../../../vendor/scandipwa/source/src/app/style/abstract/media';
+@import '../../../../../../../../../vendor/scandipwa/source/src/app/style/abstract/button';
+@import '../../../../../../../../../vendor/scandipwa/source/src/app/style/abstract/loader';
 
-    // In case you have overrides for the files
-    @import './icons';
-    @import './parts';
+// In case you have overrides for the files
+@import './icons';
+@import './parts';
 
-    // Here, you can add your files
-    @import './my-abstract-style';
+// Here, you can add your files
+@import './my-abstract-style';
 ```
 
 2. In both webpack configurations (`webpack.development.config.js`, `webpack.production.config.js`) change following line:
 
 ```js
-    path.resolve(fallbackRoot, 'src', 'app', 'style', 'abstract', '_abstract.scss') // from "fallbackRoot"
-    path.resolve(projectRoot, 'src', 'app', 'style', 'abstract', '_abstract.scss') // to "projectRoot"
+path.resolve(fallbackRoot, 'src', 'app', 'style', 'abstract', '_abstract.scss') // from "fallbackRoot"
+path.resolve(projectRoot, 'src', 'app', 'style', 'abstract', '_abstract.scss') // to "projectRoot"
 ```
 
 ## Overriding templates (HTML, pHTML)
@@ -259,23 +259,23 @@ ScandiPWA has a long-standing bug - the templates are impossibble to override. F
 2. Change their webpack import declarations. In both webpack configurations (`webpack.development.config.js`, `webpack.production.config.js`) change following line:
 
 ```js
-    // In the "webpack.production.config.js"
-    path.resolve(projectRoot, 'src', 'public', 'index.production.phtml') // from "index.production.phtml"
-    path.resolve(projectRoot, 'src', 'public', 'index.production.phtml') // to "my-index.production.phtml"
+// In the "webpack.production.config.js"
+path.resolve(projectRoot, 'src', 'public', 'index.production.phtml') // from "index.production.phtml"
+path.resolve(projectRoot, 'src', 'public', 'index.production.phtml') // to "my-index.production.phtml"
 
-    // In the "webpack.development.config.js"
-    path.resolve(projectRoot, 'src', 'public', 'index.development.html') // from "index.development.html"
-    path.resolve(projectRoot, 'src', 'public', 'my-index.development.html') // to "my-index.development.html"
+// In the "webpack.development.config.js"
+path.resolve(projectRoot, 'src', 'public', 'index.development.html') // from "index.development.html"
+path.resolve(projectRoot, 'src', 'public', 'my-index.development.html') // to "my-index.development.html"
 ```
 
 3. Reload the webpack. If using docker the following command should be executed:
 
 ```bash
-    # if you have the alias set up
-    dcf restart frontend
+# if you have the alias set up
+dcf restart frontend
 
-    # without aliases (not recommended)
-    docker-compose -f docker-compose.yml -f docker-compose.local.yml -f docker-compose.ssl.yml -f docker-compose.frontend.yml restart frontend
+# without aliases (not recommended)
+docker-compose -f docker-compose.yml -f docker-compose.local.yml -f docker-compose.ssl.yml -f docker-compose.frontend.yml restart frontend
 ```
 
 If using without docker - stop the server, then start it again.

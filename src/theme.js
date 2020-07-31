@@ -283,6 +283,7 @@ const sharedStyles = {
     },
 
     '& h2': {
+      marginBottom: 30,
       '::before': {
         content: ' ',
         display: 'block',

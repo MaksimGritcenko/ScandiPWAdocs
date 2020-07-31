@@ -51,12 +51,12 @@ Others, which must be available in every component style must be moved into `src
 - Define media breakpoints, for mobile, for table, for desktop. By default they are as follows (declared in `src/app/style/abstract/_media.scss`):
 
 ```
-                      0          768px      1024px     +∞
-    desktop           |          |          |███████████
-    before-desktop    ███████████████████████          |
-    tablet            |          ████████████          |
-    after-mobile      |          ███████████████████████
-    mobile            ███████████|          |          |
+                   0          768px      1024px     +∞
+desktop           |          |          |███████████
+before-desktop    ███████████████████████          |
+tablet            |          ████████████          |
+after-mobile      |          ███████████████████████
+mobile            ███████████|          |          |
 ```
 
 ## Optimize fonts

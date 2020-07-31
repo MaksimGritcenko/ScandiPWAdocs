@@ -15,15 +15,15 @@ const MarkdownHeader = ({title}: {title: string}) => (
       css={{
         color: colors.dark,
         marginBottom: 0,
-        marginTop: 100, // BLM
+        marginTop: 40, // BLM
         ...fonts.header,
 
         [media.size('medium')]: {
-          marginTop: 100, // BLM
+          marginTop: 40, // BLM
         },
 
         [media.greaterThan('large')]: {
-          marginTop: 100, // BLM
+          marginTop: 40, // BLM
         },
       }}>
       {title}
