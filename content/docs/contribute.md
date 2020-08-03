@@ -16,7 +16,9 @@ micro_nav:
 
 ---
 
-## Follow me setting the theme up
+## How to Contribute: From Install to Pull-Request
+
+ScandiPWA Frontend Lead Alfreds is talking about how to contribute to the ScandiPWA open-source theme.
 
 <div class="video">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/BWBvjkpIaY8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

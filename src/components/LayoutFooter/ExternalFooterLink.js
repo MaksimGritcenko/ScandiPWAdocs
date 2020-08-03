@@ -22,6 +22,7 @@ const ExternalFooterLink = ({children, href, target, rel}: Props) => (
   <a
     css={{
       lineHeight: 2,
+      marginRight: 20,
       ':hover': {
         color: colors.brand,
       },

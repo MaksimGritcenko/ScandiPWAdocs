@@ -16,7 +16,9 @@ micro_nav:
 
 ---
 
-## Follow me setting the theme up
+## The recommended React practices 
+
+ScandiPWA Frontend Lead Alfreds is talking about React best practices.
 
 <div class="video">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/0tSXwEg26UA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

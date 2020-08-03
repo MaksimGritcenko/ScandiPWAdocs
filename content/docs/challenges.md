@@ -75,6 +75,6 @@ An alternative, less efficient, and less robust approach is to send the stringif
 
 Another, more complex way to cache data is to create an additional entity storage server (database). This storage could be later syncronized with any e-commerce BE, like, i.e. Magento 2. This approach is very popular within the backend-agnostic solutions, where the middleware server could be responsible for the database operation. The downsides are the **introduced stack complexity** and **the lack of data-integrity**.
 
-## Summary
+<!-- ## Summary -->
 
 <!-- TODO: complete doc @liana -->

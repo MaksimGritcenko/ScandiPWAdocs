@@ -16,7 +16,9 @@ micro_nav:
 
 ---
 
-## Follow me setting the theme up
+## Watch an explanation video
+
+ScandiPWA Frontend Lead Alfreds is explaining how to set up ScandiPWA frontend.
 
 <div class="video">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/TqJw883qvrA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

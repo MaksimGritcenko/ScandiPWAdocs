@@ -16,8 +16,12 @@ micro_nav:
 
 ---
 
-## Follow me setting the theme up
+## Watch the tutorial
+
+In this video, ScandiPWA Frontend Lead Alfreds is demonstrating how to debug and inspect ScandiPWA theme.
 
 <div class="video">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/LBSovCTT7rM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
+
+

@@ -16,7 +16,9 @@ micro_nav:
 
 ---
 
-## Follow me setting the theme up
+<!-- ## Best Practices Working with Styles -->
+
+ScandiPWA Frontend Lead Alfreds is sharing the styling best practices when working with ScandiPWA theme.
 
 <div class="video">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/W4LUYfLUCqs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
