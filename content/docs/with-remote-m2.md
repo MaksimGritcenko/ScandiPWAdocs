@@ -173,7 +173,7 @@ npm run watch
 
 Follow this simple algorithm:
 
-1. Refer to the [FAQ page](/docs/development.html). It most probably already has the solution to your problem.
+1. Refer to the [FAQ page](./development.html). It most probably already has the solution to your problem.
 
 > **Note**:
 >

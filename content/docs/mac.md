@@ -292,13 +292,13 @@ magento c:f
 
 Stuck? Don't know where to start? Checkout our development guide! It will guide you through the best-practices working with ScandiPWA! How to debug, configure the code-editor, code-style checker and create your first base-template! This, and much-much more in:
 
-[Our awesome development guide](/docs/base-template.html/)
+[Our awesome development guide](./base-template.html/)
 
 ## Something does not work?
 
 Follow this simple algorithm:
 
-1. Refer to the [FAQ page](/docs/development.html/). It most probably already has the solution to your problem.
+1. Refer to the [FAQ page](./development.html/). It most probably already has the solution to your problem.
 
 2. If the issue still persists, [join our community slack](https://join.slack.com/t/scandipwa/shared_invite/enQtNzE2Mjg1Nzg3MTg5LTQwM2E2NmQ0NmQ2MzliMjVjYjQ1MTFiYWU5ODAyYTYyMGQzNWM3MDhkYzkyZGMxYTJlZWI1N2ExY2Q1MDMwMTk), and feel free to ask questions in `#pwa_tech` public channel.
 

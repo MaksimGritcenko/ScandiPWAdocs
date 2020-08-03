@@ -29,9 +29,9 @@ The theme is expected to be found in Magento's directory for themes: `app/design
 
 > **Note**:
 >
-> do not worry that you see no source files (.js, .scss) in your theme. This is expected. You are meant to create files in the same folder with the same name in order to modify them. See [extension](/docs/extension.html) guide for that.
+> do not worry that you see no source files (.js, .scss) in your theme. This is expected. You are meant to create files in the same folder with the same name in order to modify them. See [extension](./extension.html) guide for that.
 
-The source theme (composer installed) is located in `vendor/scandipwa/source`. Reference it for efficient development. But do not modify the vendor files! Use the [extension](/docs/extension.html) mechanism for that.
+The source theme (composer installed) is located in `vendor/scandipwa/source`. Reference it for efficient development. But do not modify the vendor files! Use the [extension](./extension.html) mechanism for that.
 
 ## Watch an explanation video
 
