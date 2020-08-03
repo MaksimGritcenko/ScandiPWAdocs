@@ -149,7 +149,7 @@ Upon immediate inspection theme could appear fine, but might not load at all. Pl
 
     To resolve, go to the admin panel, create at least one CMS block and one Scandiweb menu, then go to _Store > Configuration > ScandiPWA > Content customization_ and select CMS blocks for all fields. If you will select the field to be "empty" it will also count as a selection.
 
-2. Homepage not showing - refer to the [FAQ](/docs/faq), search for `404 on Homepage`.
+2. Homepage not showing - refer to the [FAQ](/docs/installing.html), search for `404 on Homepage`.
 
 > **Note**:
 >
@@ -157,7 +157,7 @@ Upon immediate inspection theme could appear fine, but might not load at all. Pl
 
 For other issues, follow this simple algorithm:
 
-1. Refer to the [FAQ page](/docs/faq). It most probably already has the solution to your problem.
+1. Refer to the [FAQ page](/docs/installing.html). It most probably already has the solution to your problem.
 
 > **Note**:
 >

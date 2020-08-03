@@ -512,7 +512,7 @@ In case issue like this is displayed, you need to login into docker-hub. Then do
 
 ## Media not found
 
-Make sure that you follow the manual media installation instructions for your operating system - [MacOS](/docs/installation/docker/mac/) or [Linux](/docs/installation/docker/linux/).
+Make sure that you follow the manual media installation instructions for your operating system - [MacOS](/docs/mac.html) or [Linux](/docs/linux.html).
 
 >**Note**:
 >

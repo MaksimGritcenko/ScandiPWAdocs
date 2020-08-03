@@ -53,7 +53,7 @@ git clone git@github.com:<YOUR GITHUB USERNAME>/scandipwa-base.git
 
 2. Make sure your remote server has ScandiPWA installed on it
 
-    The Magento theme could be different, but ScandiPWA modules should be installed and enabled. Read more how to install the ScandiPWA on existing Magento 2 server [here](./on-existing-m2.md).
+    The Magento theme could be different, but ScandiPWA modules should be installed and enabled. Read more how to install the ScandiPWA on existing Magento 2 server [here](/docs/on-existing-m2.html).
 
     In case you do not have the ScandiPWA instance yet, try completing this setup using our instances: `demo.scandipwa.com` or `scandipwapmrev.indvp.com`. You can also request your own cloud instance by composing a mail to hello@scandipwa.com.
 
@@ -173,7 +173,7 @@ npm run watch
 
 Follow this simple algorithm:
 
-1. Refer to the [FAQ page](/docs/faq). It most probably already has the solution to your problem.
+1. Refer to the [FAQ page](/docs/development.html). It most probably already has the solution to your problem.
 
 > **Note**:
 >

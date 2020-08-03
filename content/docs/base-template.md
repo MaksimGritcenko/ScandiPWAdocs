@@ -36,7 +36,8 @@ Remember, if they seem similar - they most probably are!
 
 Before we cover the requirements for the elements, let's define the variables for the base-template. Some of those variables must be declared as CSS custom properties in order to achieve the highest flexibility - ability to change them by context, or even from admin configuration page!
 
-Others, which must be available in every component style must be moved into `src/app/style/abstract/_abstract.scss`. Read how to properly override this specific file in the [override guide](/scandipwa/development/overrides.md).
+Others, which must be available in every component style must be moved into `src/app/style/abstract/_abstract.scss`. 
+<!-- Read how to properly override this specific file in the [override guide](/scandipwa/development/overrides.md). -->
 
 - Define primary and secondary font families
 
@@ -69,7 +70,8 @@ Please go through the project and collect the necessary font-faces. Ideally, the
 
 Try to **remove unused glyphs** (symbols). If your site is not using cyrillic, but the font includes is - ask your designer to remove them. Use services like [FontForge](https://fontforge.org/en-US/) for that!
 
-The `@font-face` declarations are located in `src/public/index.development.html` and `src/public/index.production.phtml`. Overriding those files is a little more complex then you might think. Checkout [our guide](/scandipwa/development/overrides.md) to know more!
+The `@font-face` declarations are located in `src/public/index.development.html` and `src/public/index.production.phtml`. Overriding those files is a little more complex then you might think. 
+<!-- Checkout [our guide](/scandipwa/development/overrides.md) to know more! -->
 
 > **Note**:
 >
@@ -238,13 +240,15 @@ To create a good header template you need to do following:
 4. Define the list of application routes
 5. Map the routes to header states
 
-Mapping of header icons and parts are made in `stateMap` of `src/app/component/Header/Header.component.js`. The mapping of routes to header states happens in `routeMap` of `src/app/component/Header/Header.container.js`. Learn how to extend Header styles in the [override guide](/scandipwa/development/overrides.md).
+Mapping of header icons and parts are made in `stateMap` of `src/app/component/Header/Header.component.js`. The mapping of routes to header states happens in `routeMap` of `src/app/component/Header/Header.container.js`. 
+<!-- Learn how to extend Header styles in the [override guide](/scandipwa/development/overrides.md). -->
 
 Header by default has the fixed height and many components are using it's height to position them-self right under it. This height is defined using CSS custom property `--header-height`. Remember to include the `env(safe-area-inset-top)` in you header height declaration. This will allow to compensate for iPhone X notch height.
 
 The bottom navigation is located in `src/app/component/NavigationTabs/NavigationTabs.component.js` and `src/app/component/NavigationTabs/NavigationTabs.container.js`. It also has `routeMap` in container and `stateMap` in component. This is because all navigation in ScandiPWA inherits from `src/app/component/NavigationAbstract/NavigationAbstract.component.js` and `src/app/component/NavigationAbstract/NavigationAbstract.container.js`. This allows to quickly create the navigation matching the best practices listed above.
 
-For state management the Redux is used, global state is encapsulated in NavigationReducer (`src/app/store/Navigation/Navigation.reducer.js`). To modify the existing reducer with your own, new navigation, check the [override guide](/scandipwa/development/overrides.md).
+For state management the Redux is used, global state is encapsulated in NavigationReducer (`src/app/store/Navigation/Navigation.reducer.js`). To modify the existing reducer with your own, new navigation.
+<!-- Check the [override guide](/scandipwa/development/overrides.md). -->
 
 ## ProductCard
 

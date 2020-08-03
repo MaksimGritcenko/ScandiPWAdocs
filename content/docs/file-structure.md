@@ -29,9 +29,9 @@ The theme is expected to be found in Magento's directory for themes: `app/design
 
 > **Note**:
 >
-> do not worry that you see no source files (.js, .scss) in your theme. This is expected. You are meant to create files in the same folder with the same name in order to modify them. See [extension](/docs/development/extension/) guide for that.
+> do not worry that you see no source files (.js, .scss) in your theme. This is expected. You are meant to create files in the same folder with the same name in order to modify them. See [extension](/docs/extension.html) guide for that.
 
-The source theme (composer installed) is located in `vendor/scandipwa/source`. Reference it for efficient development. But do not modify the vendor files! Use the [extension](/docs/development/extension/) mechanism for that.
+The source theme (composer installed) is located in `vendor/scandipwa/source`. Reference it for efficient development. But do not modify the vendor files! Use the [extension](/docs/extension.html) mechanism for that.
 
 ## Watch an explanation video
 
@@ -45,7 +45,9 @@ Because the ScandiPWA is compiled to a valid Magento 2 theme, it must follow [Ma
 
 > **Note**:
 >
-> initially `Magento_Theme` folder is empty. You have to compile the application - see the [FAQ](/setup/docker/faq?id=luma-theme-is-displayed).
+> initially `Magento_Theme` folder is empty. You have to compile the application - see the [FAQ](/docs/installing.html?id=luma-theme-is-displayed).
+
+<!-- doesn`t links to luma-theme-is-displayed -->
 
 ```bash
 📦base-theme
@@ -66,7 +68,9 @@ Because the ScandiPWA is compiled to a valid Magento 2 theme, it must follow [Ma
 
 ## Browse theme internals
 
-The [modern application stack](/scandipwa/stack.md) fluidly merged with the [flat structure](/scandipwa/organization?id=flat-file-structure). Notice, the main folders are:
+<!-- The [modern application stack](/scandipwa/stack.md) fluidly merged with the [flat structure](/scandipwa/organization?id=flat-file-structure). Notice, the main folders are: -->
+
+The modern application stack fluidly merged with the flat structure. Notice, the main folders are:
 
 - **component** - React components
 - **route** - application route collection
