@@ -18,6 +18,7 @@ import loadScript from 'utils/loadScript';
 import createCanonicalUrl from 'utils/createCanonicalUrl';
 import {babelURL} from 'site-constants';
 import logoWhiteSvg from 'icons/logo-white.svg';
+import './../css/index.css'
 
 class Home extends Component {
   state = {
@@ -56,7 +57,6 @@ class Home extends Component {
         <div
           css={{
             width: '100%',
-            marginTop: 60, // BLM
           }}>
           <header
             css={{
@@ -87,10 +87,6 @@ class Home extends Component {
                     left: 0,
                     bottom: 0,
                     right: 0,
-                    backgroundImage: `url(${logoWhiteSvg})`,
-                    backgroundRepeat: 'no-repeat',
-                    backgroundPosition: '100% 100px',
-                    backgroundSize: '50% auto',
                     opacity: 0.05,
                   },
                 },
@@ -115,7 +111,7 @@ class Home extends Component {
                         fontSize: 60,
                       },
                     }}>
-                    React
+                    ScandiPWA
                   </h1>
                   <p
                     css={{
@@ -137,7 +133,7 @@ class Home extends Component {
                         fontSize: 30,
                       },
                     }}>
-                    A JavaScript library for building user interfaces
+                    The fastest Open-Source theme for Magento 2.
                   </p>
                   <Flex
                     valign="center"
@@ -151,16 +147,43 @@ class Home extends Component {
                         paddingTop: 65,
                       },
                     }}>
+                       {/* <CtaItem>
+                      <ButtonLink to="https://github.com/scandipwa/base-theme" type="secondary">
+                        GitHub
+                      </ButtonLink>
+                    </CtaItem> */}
+                      <a
+                        href="https://github.com/scandipwa/base-theme"
+                        css={{
+                          fontSize: 20,
+                          color: colors.brand,
+                          marginRight: 20,
+                          transition: 'color .1s linear',
+                          cursor: 'pointer',
+                          ':hover': {
+                            color: '#fff',
+                        },
+                      }}>
+                        GitHub
+                      </a>
+                      <a
+                        href="https://join.slack.com/t/scandipwa/shared_invite/enQtNzE2Mjg1Nzg3MTg5LTQwM2E2NmQ0NmQ2MzliMjVjYjQ1MTFiYWU5ODAyYTYyMGQzNWM3MDhkYzkyZGMxYTJlZWI1N2ExY2Q1MDMwMTk"
+                        css={{
+                          fontSize: 20,
+                          color: colors.brand,
+                          transition: 'color .1s linear',
+                          cursor: 'pointer',
+                          ':hover': {
+                            color: '#fff',
+                        },
+                      }}>
+                        Slack
+                      </a>
                     <CtaItem>
                       <ButtonLink
-                        to="/docs/getting-started.html"
+                        to="./docs/linux.html"
                         type="primary">
-                        Get Started
-                      </ButtonLink>
-                    </CtaItem>
-                    <CtaItem>
-                      <ButtonLink to="/tutorial/tutorial.html" type="secondary">
-                        Take the Tutorial
+                        Let`s Get Started
                       </ButtonLink>
                     </CtaItem>
                   </Flex>
@@ -187,7 +210,60 @@ class Home extends Component {
                     },
                   },
                 ]}>
-                <div
+                  <div className="MainLinks">
+                    <hx css={{fontSize: 24}}>Sections</hx>
+                    <ol>
+                      <li css={{fontSize: 20}}>Start & Upgrade</li>
+                        <ul>
+                          <li><a href="./docs/linux.html">Linux</a></li>
+                          <li><a href="./docs/mac.html">MacOS</a></li>
+                          <li><a href="./docs/with-remote-m2.html">Remote Magento Instance</a></li>
+                          <li><a href="./docs/update.html">Theme Upgrade</a></li>
+                        </ul>
+                      <li css={{fontSize: 20}}>A to Z Overview</li>
+                        <ul>
+                          <li><a href="./docs/motivation.html">Motivation</a></li>
+                          <li><a href="./docs/challenges.html">Challenges</a></li>
+                          <li><a href="./docs/file-structure-ui.html">File structure and UI components</a></li>
+                          <li><a href="./docs/rewriting-extending.html">Rewriting and extending theme</a></li>
+                        </ul>
+                      <li css={{fontSize: 20}}>FAQ</li>
+                        <ul>
+                          <li><a href="./docs/development.html">Installation</a></li>
+                          <li><a href="./docs/installing.html">Development</a></li>
+                        </ul>
+                      <li css={{fontSize: 20}}>How-to tutorials - Introductory</li>
+                        <ul>
+                          <li><a href="./docs/base-template.html">Base template</a></li>
+                          <li><a href="./docs/connecting-resolver.html">Connecting to a GraphQL Resolver</a></li>
+                          <li><a href="./docs/extension.html">Customizing and Overwriting</a></li>
+                          <li><a href="./docs/creating-resolver.html">Creating GraphQL resolver</a></li>
+                          <li><a href="./docs/debug-and-inspect.html">Debugging and Inspecting</a></li>
+                          <li><a href="./docs/frontend-setup.html">Setting Up Frontend</a></li>
+                          <li><a href="./docs/file-structure.html">File Structure</a></li>
+                          <li><a href="./docs/data-flow.html">Data Flow</a></li>
+                          <li><a href="./docs/technology-stack.html">Technology Stack</a></li>
+                          <li><a href="./docs/build-and-configuration.html">Theme Build and Configuration</a></li>
+                          <li><a href="./docs/caching.html">Implementing Caching for New Caching Identities</a></li>
+                        </ul>
+                      <li css={{fontSize: 20}}>How-to tutorials - Intermediate</li>
+                        <ul>
+                          <li><a href="./docs/debug-in-chrome.html">Debugging in Chrome</a></li>
+                          <li><a href="./docs/xdebug.html">Configuring XDebug</a></li>
+                          <li><a href="./docs/cli.html">CLI in Docker</a></li>
+                          <li><a href="./docs/postman-graphql-playground.html">Postman & GraphQL Playground</a></li>
+                          <li><a href="./docs/vsc-extensions.html">VSCode Extensions</a></li>
+                          <li><a href="./docs/eslint-stylelint.html">ESlint & StyleLint</a></li>
+                          <li><a href="./docs/contribute.html">How to Contribute</a></li>
+                          <li><a href="./docs/migrate-newer-version.html">Migrating to a Newer Version</a></li>
+                          <li><a href="./docs/on-existing-m2.html">Installation on Existing Magento 2 Server</a></li>
+                          <li><a href="./docs/coding-standard.html">BEM and Coding Standards</a></li>
+                          <li><a href="./docs/react-best-practices.html">React Best Practices</a></li>
+                          <li><a href="./docs/best-practices-styles.html">Best Practices Working with Styles</a></li>
+                        </ul>
+                    </ol>
+                  </div>
+                {/* <div
                   css={{
                     display: 'flex',
                     flexDirection: 'row',
@@ -276,39 +352,10 @@ class Home extends Component {
                       </CodeExample>
                     );
                   })}
-                </div>
+                </div> */}
               </section>
             </div>
           </Container>
-
-          <section
-            css={{
-              background: colors.dark,
-              color: colors.white,
-              paddingTop: 45,
-              paddingBottom: 25,
-            }}>
-            <Container>
-              <Flex
-                valign="center"
-                halign="center"
-                css={{
-                  flexWrap: 'wrap',
-                  justifyContent: 'center',
-                }}>
-                <CtaItem>
-                  <ButtonLink to="/docs/getting-started.html" type="primary">
-                    Get Started
-                  </ButtonLink>
-                </CtaItem>
-                <CtaItem>
-                  <ButtonLink to="/tutorial/tutorial.html" type="secondary">
-                    Take the Tutorial
-                  </ButtonLink>
-                </CtaItem>
-              </Flex>
-            </Container>
-          </section>
         </div>
       </Layout>
     );
