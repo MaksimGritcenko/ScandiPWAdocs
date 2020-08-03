@@ -6,19 +6,19 @@
  */
 
 import Container from 'components/Container';
-import ExternalFooterLink from './ExternalFooterLink';
-import FooterLink from './FooterLink';
+// import ExternalFooterLink from './ExternalFooterLink';
+// import FooterLink from './FooterLink';
 import FooterNav from './FooterNav';
-import MetaTitle from 'templates/components/MetaTitle';
+// import MetaTitle from 'templates/components/MetaTitle';
 import SectionLinks from './SectionLinks';
 import React from 'react';
 import {colors, media} from 'theme';
-import {sectionListCommunity, sectionListDocs} from 'utils/sectionList';
+// import {sectionListCommunity, sectionListDocs} from 'utils/sectionList';
 
 // $FlowFixMe
 import navFooter from '../../../content/footerNav.yml';
 
-import ossLogoPng from 'images/oss_logo.png';
+// import ossLogoPng from 'images/oss_logo.png';
 
 const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => {
   console.log(navFooter)
