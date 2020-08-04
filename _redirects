@@ -9,8 +9,6 @@
 ## Created with gatsby-plugin-netlify
 
 /index.html  /  302
-/docs/getting-started  /docs/getting-started.html  302
-/docs/getting-started/  /docs/getting-started.html  302
 /docs/  /docs/linux.html  302
 /docs/index.html  /docs/linux.html  302
 /docs/getting-started-ko-KR.html  /docs/linux.html  302
@@ -23,21 +21,9 @@
 /docs/package-management.html  /docs/linux.html  302
 /docs/language-tooling.html  /docs/linux.html  302
 /docs/environments.html  /docs/linux.html  302
+/docs/getting-started  /docs/getting-started.html  302
+/docs/getting-started/  /docs/getting-started.html  302
 /docs/thinking-in-react  /docs/thinking-in-react.html  302
 /docs/thinking-in-react/  /docs/thinking-in-react.html  302
 /blog/2013/11/05/thinking-in-react.html  /docs/thinking-in-react.html  302
 /docs/thinking-in-react-zh-CN.html  /docs/thinking-in-react.html  302
-/warnings/dont-call-proptypes  /warnings/dont-call-proptypes.html  302
-/warnings/dont-call-proptypes/  /warnings/dont-call-proptypes.html  302
-/warnings/invalid-aria-prop  /warnings/invalid-aria-prop.html  302
-/warnings/invalid-aria-prop/  /warnings/invalid-aria-prop.html  302
-/warnings/legacy-factories  /warnings/legacy-factories.html  302
-/warnings/legacy-factories/  /warnings/legacy-factories.html  302
-/warnings/refs-must-have-owner  /warnings/refs-must-have-owner.html  302
-/warnings/refs-must-have-owner/  /warnings/refs-must-have-owner.html  302
-/warnings/invalid-hook-call-warning  /warnings/invalid-hook-call-warning.html  302
-/warnings/invalid-hook-call-warning/  /warnings/invalid-hook-call-warning.html  302
-/warnings/special-props  /warnings/special-props.html  302
-/warnings/special-props/  /warnings/special-props.html  302
-/warnings/unknown-prop  /warnings/unknown-prop.html  302
-/warnings/unknown-prop/  /warnings/unknown-prop.html  302
