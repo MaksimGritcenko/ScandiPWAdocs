@@ -21,7 +21,6 @@ import navFooter from '../../../content/footerNav.yml';
 // import ossLogoPng from 'images/oss_logo.png';
 
 const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => {
-  console.log(navFooter)
   return (
   <footer
     css={{
@@ -76,54 +75,11 @@ const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => {
               paddingLeft: 40,
             },
           }}>
-          {/* <FooterNav layoutHasSidebar={layoutHasSidebar}>
-            <MetaTitle onDark={true}>{navFooter.docs.title}</MetaTitle>
-            {sectionListDocs.map(section => {
-              const defaultItem = section.items[0];
-              console.log(section)
-              return (
-                <FooterLink
-                  to={`/docs/${defaultItem.id}.html`}
-                  key={section.title}>
-                  {section.title}
-                </FooterLink>
-              );
-            })}
-          </FooterNav>
-          <FooterNav layoutHasSidebar={layoutHasSidebar}>
-            <MetaTitle onDark={true}>{navFooter.channels.title}</MetaTitle>
-            <SectionLinks links={navFooter.channels.items} />
-          </FooterNav>
-
-          <FooterNav layoutHasSidebar={layoutHasSidebar}>
-            <MetaTitle onDark={true}>{navFooter.community.title}</MetaTitle>
-            <ExternalFooterLink
-              href={`https://github.com/facebook/react/blob/master/CODE_OF_CONDUCT.md`}>
-              Code of Conduct
-            </ExternalFooterLink>
-            {sectionListCommunity.map(section => (
-              <FooterLink
-                to={`/community/${section.items[0].id}.html`}
-                key={section.title}>
-                {section.title}
-              </FooterLink>
-            ))}
-          </FooterNav> */}
 
           <FooterNav layoutHasSidebar={layoutHasSidebar}>
             <SectionLinks links={navFooter.privacy.items} />
           </FooterNav>
 
-          {/* <FooterNav layoutHasSidebar={layoutHasSidebar}>
-            <MetaTitle onDark={true}>{navFooter.more.title}</MetaTitle>
-            <SectionLinks links={navFooter.more.items} />
-            <ExternalFooterLink href="https://opensource.facebook.com/legal/privacy">
-              Privacy
-            </ExternalFooterLink>
-            <ExternalFooterLink href="https://opensource.facebook.com/legal/terms">
-              Terms
-            </ExternalFooterLink>
-          </FooterNav> */}
         </div>
         <section
           css={{
@@ -148,14 +104,6 @@ const Footer = ({layoutHasSidebar = false}: {layoutHasSidebar: boolean}) => {
             href="https://scandipwa.com/"
             target="_blank"
             rel="noopener">
-            {/* <img
-              alt="Facebook Open Source"
-              css={{
-                maxWidth: 160,
-                height: 'auto',
-              }}
-              src={ossLogoPng}
-            /> */}
              <svg xmlns="http://www.w3.org/2000/svg" width="180" height="50" viewBox="0 0 206 50">
                 <g fill="none" fillRule="evenodd"><text fill="#bbb" fontFamily="Montserrat-SemiBold, Montserrat" fontSize="12"
                 fontWeight="500" letterSpacing="-.1">

@@ -11,7 +11,7 @@ import {urlRoot} from 'site-constants';
 // $FlowFixMe This is a valid path
 import languages from '../../../content/languages.yml';
 
-const defaultDescription = 'A JavaScript library for building user interfaces';
+const defaultDescription = 'The fastest Open-Source theme for Magento 2';
 
 type Props = {
   title: string,
@@ -51,7 +51,7 @@ const TitleAndMetaTags = ({title, ogDescription, canonicalUrl}: Props) => {
       <meta property="og:title" content={title} />
       <meta property="og:type" content="website" />
       {canonicalUrl && <meta property="og:url" content={canonicalUrl} />}
-      <meta property="og:image" content="https://reactjs.org/logo-og.png" />
+      {/* <meta property="og:image" content="https://reactjs.org/logo-og.png" /> */}
       <meta
         property="og:description"
         content={ogDescription || defaultDescription}

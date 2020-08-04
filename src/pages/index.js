@@ -378,7 +378,7 @@ const CtaItem = ({children, primary = false}) => (
       },
 
       [media.greaterThan('xlarge')]: {
-        paddingLeft: 40,
+        // paddingLeft: 40,
       },
 
       '&:first-child': {
