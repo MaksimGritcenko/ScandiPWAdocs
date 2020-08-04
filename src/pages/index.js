@@ -171,6 +171,7 @@ class Home extends Component {
                         css={{
                           fontSize: 20,
                           color: colors.brand,
+                          marginRight: 20,
                           transition: 'color .1s linear',
                           cursor: 'pointer',
                           ':hover': {
@@ -211,7 +212,7 @@ class Home extends Component {
                   },
                 ]}>
                   <div className="MainLinks">
-                    <hx css={{fontSize: 24}}>Sections</hx>
+                    <span css={{fontSize: 24}}>Sections</span>
                     <ol>
                       <li css={{fontSize: 20}}>Start & Upgrade</li>
                         <ul>
@@ -373,7 +374,7 @@ const CtaItem = ({children, primary = false}) => (
   <div
     css={{
       [media.between('small', 'large')]: {
-        paddingLeft: 20,
+        // paddingLeft: 20,
       },
 
       [media.greaterThan('xlarge')]: {

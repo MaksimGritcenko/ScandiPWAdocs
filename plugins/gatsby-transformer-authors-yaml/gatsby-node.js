@@ -12,26 +12,26 @@ const safeLoad = require('js-yaml').safeLoad;
 
 // Reads authors.yml data into GraphQL.
 // This is auto-linked by gatsby-config.js to blog posts.
-exports.sourceNodes = ({graphql, actions}) => {
-  const {createNode} = actions;
+// exports.sourceNodes = ({graphql, actions}) => {
+//   const {createNode} = actions;
 
-  const path = resolve(__dirname, '../../content/authors.yml');
-  const file = readFileSync(path, 'utf8');
-  const authors = safeLoad(file);
+//   const path = resolve(__dirname, '../../content/authors.yml');
+//   const file = readFileSync(path, 'utf8');
+//   const authors = safeLoad(file);
 
-  // authors.yml structure is {[username: string]: {name: string, url: string}}
-  Object.keys(authors).forEach(username => {
-    const author = authors[username];
+//   // authors.yml structure is {[username: string]: {name: string, url: string}}
+//   Object.keys(authors).forEach(username => {
+//     const author = authors[username];
 
-    createNode({
-      id: username,
-      children: [],
-      parent: 'AUTHORS',
-      internal: {
-        type: 'AuthorYaml',
-        contentDigest: JSON.stringify(author),
-      },
-      frontmatter: author,
-    });
-  });
-};
+//     createNode({
+//       id: username,
+//       children: [],
+//       parent: 'AUTHORS',
+//       internal: {
+//         type: 'AuthorYaml',
+//         contentDigest: JSON.stringify(author),
+//       },
+//       frontmatter: author,
+//     });
+//   });
+// };
