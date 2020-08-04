@@ -5,9 +5,9 @@ items:
   - title: Tutorial
     to: /tutorial/tutorial.html
     activeSelector: /tutorial
-  - title: Blog
-    to: /blog/
-    activeSelector: /blog
+  # - title: Blog
+  #   to: /blog/
+  #   activeSelector: /blog
   - title: Community
     to: /community/support.html
     activeSelector: /community

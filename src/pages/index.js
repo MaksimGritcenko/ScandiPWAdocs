@@ -7,7 +7,7 @@
 import ButtonLink from 'components/ButtonLink';
 import Container from 'components/Container';
 import Flex from 'components/Flex';
-import CodeExample from 'components/CodeExample';
+// import CodeExample from 'components/CodeExample';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {graphql} from 'gatsby';
@@ -17,7 +17,7 @@ import {colors, media, sharedStyles} from 'theme';
 import loadScript from 'utils/loadScript';
 import createCanonicalUrl from 'utils/createCanonicalUrl';
 import {babelURL} from 'site-constants';
-import logoWhiteSvg from 'icons/logo-white.svg';
+// import logoWhiteSvg from 'icons/logo-white.svg';
 import './../css/index.css'
 
 class Home extends Component {

@@ -14,15 +14,6 @@ micro_nav:
   url: '/docs/docker'
   title: Docker
 
-# Page navigation
-page_nav:
-    prev:
-        content: Environment configuration
-        url: '/docs/docker/configuration'
-    next:
-        content: Infrastructure differences
-        url: '/docs/docker/infrastructure'
-
 ---
 
 ## Watch the video tutorial
