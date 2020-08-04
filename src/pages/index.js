@@ -1,23 +1,13 @@
-/**
- * Copyright (c) Facebook, Inc. and its affiliates.
- *
- * @emails react-core
- */
-
 import ButtonLink from 'components/ButtonLink';
 import Container from 'components/Container';
 import Flex from 'components/Flex';
-// import CodeExample from 'components/CodeExample';
-import PropTypes from 'prop-types';
 import React, {Component} from 'react';
-import {graphql} from 'gatsby';
 import TitleAndMetaTags from 'components/TitleAndMetaTags';
 import Layout from 'components/Layout';
 import {colors, media, sharedStyles} from 'theme';
 import loadScript from 'utils/loadScript';
 import createCanonicalUrl from 'utils/createCanonicalUrl';
 import {babelURL} from 'site-constants';
-// import logoWhiteSvg from 'icons/logo-white.svg';
 import './../css/index.css'
 
 class Home extends Component {
@@ -39,14 +29,8 @@ class Home extends Component {
   }
 
   render() {
-    const {babelLoaded} = this.state;
-    const {data, location} = this.props;
-    const {codeExamples, examples, marketing} = data;
-
-    const code = codeExamples.edges.reduce((lookup, {node}) => {
-      lookup[node.mdAbsolutePath] = node;
-      return lookup;
-    }, {});
+    // const {babelLoaded} = this.state;
+    const {location} = this.props;
 
     return (
       <Layout location={location}>
@@ -147,11 +131,6 @@ class Home extends Component {
                         paddingTop: 65,
                       },
                     }}>
-                       {/* <CtaItem>
-                      <ButtonLink to="https://github.com/scandipwa/base-theme" type="secondary">
-                        GitHub
-                      </ButtonLink>
-                    </CtaItem> */}
                       <a
                         href="https://github.com/scandipwa/base-theme"
                         css={{
@@ -264,96 +243,6 @@ class Home extends Component {
                         </ul>
                     </ol>
                   </div>
-                {/* <div
-                  css={{
-                    display: 'flex',
-                    flexDirection: 'row',
-
-                    [media.lessThan('medium')]: {
-                      display: 'block',
-                      whiteSpace: 'nowrap',
-                    },
-                  }}>
-                  {marketing.edges.map(({node: column}, index) => (
-                    <div
-                      key={index}
-                      css={{
-                        display: 'flex',
-                        flexDirection: 'column',
-                        flex: '0 1 33%',
-                        marginLeft: 40,
-
-                        '&:first-of-type': {
-                          marginLeft: 0,
-
-                          [media.lessThan('medium')]: {
-                            marginLeft: 10,
-                          },
-                        },
-
-                        [media.lessThan('medium')]: {
-                          display: 'inline-block',
-                          verticalAlign: 'top',
-                          marginLeft: 0,
-                          whiteSpace: 'normal',
-                          width: '75%',
-                          marginRight: 20,
-                          paddingBottom: 40,
-
-                          '&:first-of-type': {
-                            marginTop: 0,
-                          },
-                        },
-                      }}>
-                      <h3
-                        css={[
-                          headingStyles,
-                          {
-                            '&&': {
-                              // Make specificity higher than the site-wide h3 styles.
-                              color: colors.subtle,
-                              paddingTop: 0,
-                              fontWeight: 300,
-                              fontSize: 20,
-
-                              [media.greaterThan('xlarge')]: {
-                                fontSize: 24,
-                              },
-                            },
-                          },
-                        ]}>
-                        {column.frontmatter.title}
-                      </h3>
-                      <div dangerouslySetInnerHTML={{__html: column.html}} />
-                    </div>
-                  ))}
-                </div>
-              </section>
-              <hr
-                css={{
-                  height: 1,
-                  marginBottom: -1,
-                  border: 'none',
-                  borderBottom: `1 solid ${colors.divider}`,
-                }}
-              />
-              <section css={sectionStyles}>
-                <div id="examples">
-                  {examples.edges.map(({node}, index) => {
-                    const snippet = code[node.fileAbsolutePath];
-                    return (
-                      <CodeExample
-                        key={index}
-                        id={snippet.id}
-                        code={snippet.code}
-                        containerNodeID={node.frontmatter.domid}
-                        loaded={babelLoaded}>
-                        <h3 css={headingStyles}>{node.frontmatter.title}</h3>
-                        <div dangerouslySetInnerHTML={{__html: node.html}} />
-                      </CodeExample>
-                    );
-                  })}
-                </div> */}
               </section>
             </div>
           </Container>
@@ -363,24 +252,10 @@ class Home extends Component {
   }
 }
 
-Home.propTypes = {
-  data: PropTypes.shape({
-    examples: PropTypes.object.isRequired,
-    marketing: PropTypes.object.isRequired,
-  }).isRequired,
-};
 
 const CtaItem = ({children, primary = false}) => (
   <div
     css={{
-      [media.between('small', 'large')]: {
-        // paddingLeft: 20,
-      },
-
-      [media.greaterThan('xlarge')]: {
-        // paddingLeft: 40,
-      },
-
       '&:first-child': {
         textAlign: 'right',
         paddingRight: 7,
@@ -405,52 +280,6 @@ const CtaItem = ({children, primary = false}) => (
   </div>
 );
 
-export const pageQuery = graphql`
-  query IndexMarkdown {
-    codeExamples: allExampleCode {
-      edges {
-        node {
-          id
-          code
-          mdAbsolutePath
-        }
-      }
-    }
-
-    examples: allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "//home/examples//"}}
-      sort: {fields: [frontmatter___order], order: ASC}
-    ) {
-      edges {
-        node {
-          fileAbsolutePath
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            domid
-          }
-          html
-        }
-      }
-    }
-    marketing: allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "//home/marketing//"}}
-      sort: {fields: [frontmatter___order], order: ASC}
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-          }
-          html
-        }
-      }
-    }
-  }
-`;
-
 export default Home;
 
 const sectionStyles = {
@@ -463,8 +292,4 @@ const sectionStyles = {
   },
 };
 
-const headingStyles = {
-  '&&': {
-    marginBottom: 20,
-  },
-};
+
