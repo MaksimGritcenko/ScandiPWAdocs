@@ -6,19 +6,6 @@
 /your-story https://www.surveymonkey.co.uk/r/MVQV2R9 301
 /stories https://medium.com/react-community-stories 301
 
-## Created with gatsby-transformer-versions-yaml
-
-/version/16.8  https://5d4b5feba32acd0008d0df98--reactjs.netlify.com/  302
-/version/16.7  https://5c54aa429e16c80007af3cd2--reactjs.netlify.com/  302
-/version/16.6  https://5c11762d4be4d10008916ab1--reactjs.netlify.com/  302
-/version/16.5  https://5bcf5863c6aed64970d6de5b--reactjs.netlify.com/  302
-/version/16.4  https://5b90c17ac9659241e7f4c938--reactjs.netlify.com  302
-/version/16.3  https://5b05c94e0733d530fd1fafe0--reactjs.netlify.com  302
-/version/16.2  https://5abc31d8be40f1556f06c4be--reactjs.netlify.com  302
-/version/16.1  https://5a1dbcf14c4b93299e65b9a9--reactjs.netlify.com  302
-/version/16.0  https://5a046bf5a6188f4b8fa4938a--reactjs.netlify.com  302
-/version/15.6  https://react-legacy.netlify.com  302
-
 ## Created with gatsby-plugin-netlify
 
 /index.html  /  302
@@ -44,15 +31,13 @@
 /warnings/dont-call-proptypes/  /warnings/dont-call-proptypes.html  302
 /warnings/invalid-aria-prop  /warnings/invalid-aria-prop.html  302
 /warnings/invalid-aria-prop/  /warnings/invalid-aria-prop.html  302
-/warnings/invalid-hook-call-warning  /warnings/invalid-hook-call-warning.html  302
-/warnings/invalid-hook-call-warning/  /warnings/invalid-hook-call-warning.html  302
 /warnings/legacy-factories  /warnings/legacy-factories.html  302
 /warnings/legacy-factories/  /warnings/legacy-factories.html  302
 /warnings/refs-must-have-owner  /warnings/refs-must-have-owner.html  302
 /warnings/refs-must-have-owner/  /warnings/refs-must-have-owner.html  302
+/warnings/invalid-hook-call-warning  /warnings/invalid-hook-call-warning.html  302
+/warnings/invalid-hook-call-warning/  /warnings/invalid-hook-call-warning.html  302
 /warnings/special-props  /warnings/special-props.html  302
 /warnings/special-props/  /warnings/special-props.html  302
 /warnings/unknown-prop  /warnings/unknown-prop.html  302
 /warnings/unknown-prop/  /warnings/unknown-prop.html  302
-/docs/complementary-tools  /docs/complementary-tools.html  302
-/docs/complementary-tools/  /docs/complementary-tools.html  302
