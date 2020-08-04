@@ -51,10 +51,14 @@ const style = {
   [media.greaterThan('xlarge')]: {
     fontSize: 20,
   },
+  [media.lessThan('small')]: {
+    marginBottom: 20,
+  },
 };
 
 const primaryStyle = {
   backgroundColor: colors.brand,
+  fontSize: 20,
   color: colors.black,
   padding: '10px 25px',
   whiteSpace: 'nowrap',

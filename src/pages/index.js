@@ -137,6 +137,9 @@ class Home extends Component {
                           fontSize: 20,
                           color: colors.brand,
                           marginRight: 20,
+                          [media.lessThan('small')]: {
+                            marginBottom: 20,
+                          },
                           transition: 'color .1s linear',
                           cursor: 'pointer',
                           ':hover': {
@@ -151,6 +154,9 @@ class Home extends Component {
                           fontSize: 20,
                           color: colors.brand,
                           marginRight: 20,
+                          [media.lessThan('small')]: {
+                            marginBottom: 20,
+                          },
                           transition: 'color .1s linear',
                           cursor: 'pointer',
                           ':hover': {
