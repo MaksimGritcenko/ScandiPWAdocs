@@ -8,7 +8,6 @@
 import Container from 'components/Container';
 import Flex from 'components/Flex';
 import MarkdownHeader from 'components/MarkdownHeader';
-import NavigationFooter from 'templates/components/NavigationFooter';
 import React from 'react';
 import StickyResponsiveSidebar from 'components/StickyResponsiveSidebar';
 import TitleAndMetaTags from 'components/TitleAndMetaTags';
@@ -140,9 +139,6 @@ const MarkdownPage = ({
         </Container>
       </div>
 
-      {(next || prev) && (
-        <NavigationFooter location={location} next={next} prev={prev} />
-      )}
     </Flex>
   );
 };
