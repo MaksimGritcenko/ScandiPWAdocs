@@ -180,7 +180,7 @@ class Home extends Component {
                   {
                     [media.lessThan('medium')]: {
                       marginTop: 0,
-                      marginBottom: 0,
+                      marginBottom: 30,
                       overflowX: 'auto',
                       paddingTop: 30,
                       WebkitOverflowScrolling: 'touch',
