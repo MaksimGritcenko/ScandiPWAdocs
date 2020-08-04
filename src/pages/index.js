@@ -29,7 +29,7 @@ class Home extends Component {
   }
 
   render() {
-    // const {babelLoaded} = this.state;
+    const {babelLoaded} = this.state;
     const {location} = this.props;
 
     return (

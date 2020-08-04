@@ -7,7 +7,7 @@
 import React from 'react';
 import {colors} from 'theme';
 
-const MetaTitle = ({children, title, cssProps = {}, onDark = false}) => (
+const MetaTitle = ({children, cssProps = {}, onDark = false}) => (
   <div
     css={{
       color: onDark ? colors.subtleOnDark : colors.subtle,
