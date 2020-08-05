@@ -21,3 +21,11 @@ This repo contains the source code and documentation powering [docs.scandipwa.co
 
 1. `yarn dev` to start the hot-reloading development server (powered by [Gatsby](https://www.gatsbyjs.org))
 1. `open http://localhost:8000` to open the site in your favorite browser
+
+### Deploy to GitHub pages
+
+1. Create the branch called `gh-pages` in GitHub repository
+1. Go to settings and change the repository name like `username.github.io`
+1. In GitHub pages section change the branch to gh-pages
+1. Run the command `yarn deploy`
+1. Open the published website at `username.github.io` in browser
